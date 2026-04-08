@@ -1,16 +1,290 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import {
+  Gift, RectangleVertical, Store, Printer, Globe, Video, Megaphone, CalendarDays,
+  Users, Briefcase, Award, Clock
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const services = [
+  { icon: Gift, title: "Goodies & Objets Publicitaires", desc: "Stylos, mugs, casquettes, clés USB, tote bags personnalisés." },
+  { icon: RectangleVertical, title: "Kakémonos & Roll-ups", desc: "Supports visuels pour vos événements et points de vente." },
+  { icon: Store, title: "Enseignes & Façades", desc: "Signalétique extérieure et intérieure, enseignes lumineuses." },
+  { icon: Printer, title: "Impression & Printing", desc: "Flyers, brochures, cartes de visite, affiches grand format." },
+  { icon: Globe, title: "Création de Sites Web", desc: "Sites vitrine, e-commerce, applications web sur mesure." },
+  { icon: Video, title: "Vidéos & Motion Design", desc: "Spots publicitaires, animations, contenus pour réseaux sociaux." },
+  { icon: Megaphone, title: "Publicité & Campagnes", desc: "Stratégie de marque, campagnes digitales et traditionnelles." },
+  { icon: CalendarDays, title: "Organisation d'Événements", desc: "Événements corporate, lancements de produits, conférences." },
+];
+
+const stats = [
+  { icon: Clock, value: 8, suffix: "+", label: "Années d'expérience" },
+  { icon: Users, value: 200, suffix: "+", label: "Clients satisfaits" },
+  { icon: Briefcase, value: 500, suffix: "+", label: "Projets livrés" },
+  { icon: Award, value: 15, suffix: "", label: "Prix & distinctions" },
+];
+
+const testimonials = [
+  { name: "Fatou Diallo", company: "TechSen Solutions", quote: "Amelle Com a transformé notre image de marque. Un travail remarquable et un professionnalisme exemplaire." },
+  { name: "Moussa Ndiaye", company: "Dakar Logistics", quote: "De la conception à la livraison, l'équipe a su répondre à toutes nos attentes avec créativité et rigueur." },
+  { name: "Aminata Sow", company: "SenBeauty", quote: "Notre site web et nos supports de communication sont exceptionnels. Je recommande vivement Amelle Com." },
+];
+
+const marqueeItems = ["Impression", "Signalétique", "Goodies", "Web Design", "Vidéo", "Événements", "Branding", "Roll-ups", "Motion Design", "Campagnes"];
+
+function AnimatedCounter({ target, suffix }: { target: number; suffix: string }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          let start = 0;
+          const duration = 2000;
+          const step = target / (duration / 16);
+          const timer = setInterval(() => {
+            start += step;
+            if (start >= target) {
+              setCount(target);
+              clearInterval(timer);
+            } else {
+              setCount(Math.floor(start));
+            }
+          }, 16);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [target]);
+
+  return <div ref={ref} className="text-4xl md:text-5xl font-heading font-bold text-secondary">{count}{suffix}</div>;
+}
+
+const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="overflow-hidden">
+      {/* Hero */}
+      <section className="relative min-h-screen flex items-center bg-primary text-primary-foreground">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-[hsl(228,85%,18%)]" />
+        <div className="container mx-auto px-4 relative z-10 py-32">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-3xl"
+          >
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight mb-6">
+              Donnez de la voix <br />à votre <span className="text-secondary">marque.</span>
+            </h1>
+            <p className="text-lg md:text-xl text-primary-foreground/70 mb-8">
+              Impression · Signalétique · Goodies · Web · Événements · Vidéo
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-heading font-semibold">
+                <Link to="/services">Nos Services</Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground font-heading font-semibold">
+                <Link to="/catalogues">Voir nos Catalogues</Link>
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Marquee */}
+      <div className="bg-secondary py-3 overflow-hidden">
+        <div className="animate-marquee flex whitespace-nowrap">
+          {[...marqueeItems, ...marqueeItems].map((item, i) => (
+            <span key={i} className="mx-8 text-secondary-foreground font-heading font-semibold text-lg">
+              {item} ·
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* Services Grid */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">Nos Services</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Une gamme complète de solutions pour propulser votre communication.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+                className="group bg-card rounded-xl p-6 shadow-sm border border-border hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+              >
+                <div className="w-12 h-12 rounded-lg bg-primary/10 group-hover:bg-gradient-to-br group-hover:from-primary group-hover:to-secondary flex items-center justify-center mb-4 transition-all duration-300">
+                  <service.icon className="text-primary group-hover:text-primary-foreground transition-colors" size={24} />
+                </div>
+                <h3 className="font-heading font-bold text-lg mb-2">{service.title}</h3>
+                <p className="text-muted-foreground text-sm">{service.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="py-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-16">
+            Pourquoi <span className="text-secondary">Amelle Com</span> ?
+          </h2>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {stats.map((stat, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="text-center"
+              >
+                <stat.icon className="mx-auto mb-3 text-secondary" size={32} />
+                <AnimatedCounter target={stat.value} suffix={stat.suffix} />
+                <p className="text-muted-foreground mt-2 text-sm font-medium">{stat.label}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Projects */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-16">
+            Projets en Vedette
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { title: "Branding TechSen", tag: "Identité Visuelle", color: "from-primary to-primary/70" },
+              { title: "Site Web SenBeauty", tag: "Web Design", color: "from-secondary to-secondary/70" },
+              { title: "Événement Dakar Summit", tag: "Événement", color: "from-primary to-secondary" },
+            ].map((project, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="group relative rounded-xl overflow-hidden aspect-[4/3] cursor-pointer"
+              >
+                <div className={`absolute inset-0 bg-gradient-to-br ${project.color}`} />
+                <div className="absolute inset-0 bg-foreground/20 group-hover:bg-foreground/40 transition-colors" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-primary-foreground">
+                  <span className="text-xs font-medium bg-secondary/80 px-2 py-1 rounded">{project.tag}</span>
+                  <h3 className="font-heading font-bold text-xl mt-2">{project.title}</h3>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Catalogue CTA */}
+      <section className="py-20 bg-secondary">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-secondary-foreground mb-4">
+            Consultez nos catalogues produits
+          </h2>
+          <p className="text-secondary-foreground/80 mb-8 max-w-xl mx-auto">
+            Découvrez notre large gamme de goodies, impressions et supports de communication.
+          </p>
+          <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-heading font-semibold">
+            <Link to="/catalogues">Voir les Catalogues</Link>
+          </Button>
+        </div>
+      </section>
+
+      {/* Client Logos */}
+      <section className="py-16 bg-muted">
+        <div className="container mx-auto px-4">
+          <h3 className="text-center text-muted-foreground font-heading font-semibold mb-10">Ils nous font confiance</h3>
+          <div className="flex flex-wrap justify-center gap-12 items-center">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <div key={i} className="w-24 h-12 bg-border/50 rounded-lg flex items-center justify-center text-muted-foreground text-xs font-medium">
+                Client {i + 1}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-16">
+            Ce que disent nos clients
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((t, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-card rounded-xl p-8 shadow-sm border border-border"
+              >
+                <p className="text-muted-foreground italic mb-6">"{t.quote}"</p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-heading font-bold text-sm">
+                    {t.name.charAt(0)}
+                  </div>
+                  <div>
+                    <p className="font-heading font-semibold text-sm">{t.name}</p>
+                    <p className="text-xs text-muted-foreground">{t.company}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact CTA */}
+      <section className="py-20 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
+              Prêt à booster votre communication ?
+            </h2>
+            <p className="text-primary-foreground/70 mb-8">
+              Contactez-nous dès maintenant pour discuter de votre projet.
+            </p>
+            <form className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left" onSubmit={(e) => { e.preventDefault(); }}>
+              <Input placeholder="Votre nom" className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50" />
+              <Input type="email" placeholder="Votre email" className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50" />
+              <Textarea placeholder="Votre message..." className="sm:col-span-2 bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50" rows={3} />
+              <Button type="submit" className="sm:col-span-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-semibold">
+                Envoyer
+              </Button>
+            </form>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
