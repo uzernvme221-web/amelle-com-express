@@ -8,16 +8,17 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Skeleton } from "@/components/ui/skeleton";
 
 const services = [
-  { icon: Gift, title: "Goodies & Objets Publicitaires", desc: "Stylos, mugs, casquettes, clés USB, tote bags personnalisés." },
-  { icon: RectangleVertical, title: "Kakémonos & Roll-ups", desc: "Supports visuels pour vos événements et points de vente." },
-  { icon: Store, title: "Enseignes & Façades", desc: "Signalétique extérieure et intérieure, enseignes lumineuses." },
-  { icon: Printer, title: "Impression & Printing", desc: "Flyers, brochures, cartes de visite, affiches grand format." },
-  { icon: Globe, title: "Création de Sites Web", desc: "Sites vitrine, e-commerce, applications web sur mesure." },
-  { icon: Video, title: "Vidéos & Motion Design", desc: "Spots publicitaires, animations, contenus pour réseaux sociaux." },
-  { icon: Megaphone, title: "Publicité & Campagnes", desc: "Stratégie de marque, campagnes digitales et traditionnelles." },
-  { icon: CalendarDays, title: "Organisation d'Événements", desc: "Événements corporate, lancements de produits, conférences." },
+  { icon: Gift, title: "Goodies & Objets Publicitaires", desc: "Stylos, mugs, casquettes, clés USB, tote bags personnalisés.", image: "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=600&q=80" },
+  { icon: RectangleVertical, title: "Kakémonos & Roll-ups", desc: "Supports visuels pour vos événements et points de vente.", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" },
+  { icon: Store, title: "Enseignes & Façades", desc: "Signalétique extérieure et intérieure, enseignes lumineuses.", image: "https://images.unsplash.com/photo-1528698827591-e625c338dea7?w=600&q=80" },
+  { icon: Printer, title: "Impression & Printing", desc: "Flyers, brochures, cartes de visite, affiches grand format.", image: "https://images.unsplash.com/photo-1588412079929-790b9f593d8e?w=600&q=80" },
+  { icon: Globe, title: "Création de Sites Web", desc: "Sites vitrine, e-commerce, applications web sur mesure.", image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&q=80" },
+  { icon: Video, title: "Vidéos & Motion Design", desc: "Spots publicitaires, animations, contenus pour réseaux sociaux.", image: "https://images.unsplash.com/photo-1579165466741-7f35e4755660?w=600&q=80" },
+  { icon: Megaphone, title: "Publicité & Campagnes", desc: "Stratégie de marque, campagnes digitales et traditionnelles.", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" },
+  { icon: CalendarDays, title: "Organisation d'Événements", desc: "Événements corporate, lancements de produits, conférences.", image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&q=80" },
 ];
 
 const stats = [
@@ -28,9 +29,15 @@ const stats = [
 ];
 
 const testimonials = [
-  { name: "Fatou Diallo", company: "TechSen Solutions", quote: "Amelle Com a transformé notre image de marque. Un travail remarquable et un professionnalisme exemplaire." },
-  { name: "Moussa Ndiaye", company: "Dakar Logistics", quote: "De la conception à la livraison, l'équipe a su répondre à toutes nos attentes avec créativité et rigueur." },
-  { name: "Aminata Sow", company: "SenBeauty", quote: "Notre site web et nos supports de communication sont exceptionnels. Je recommande vivement Amelle Com." },
+  { name: "Fatou Diallo", company: "TechSen Solutions", quote: "Amelle Com a transformé notre image de marque. Un travail remarquable et un professionnalisme exemplaire.", avatar: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=100&h=100&fit=crop&q=80" },
+  { name: "Moussa Ndiaye", company: "Dakar Logistics", quote: "De la conception à la livraison, l'équipe a su répondre à toutes nos attentes avec créativité et rigueur.", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&q=80" },
+  { name: "Aminata Sow", company: "SenBeauty", quote: "Notre site web et nos supports de communication sont exceptionnels. Je recommande vivement Amelle Com.", avatar: "https://images.unsplash.com/photo-1589156229687-496a31ad1d1f?w=100&h=100&fit=crop&q=80" },
+];
+
+const featuredProjects = [
+  { title: "Branding TechSen", tag: "Identité Visuelle", image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&q=80" },
+  { title: "Site Web SenBeauty", tag: "Web Design", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" },
+  { title: "Événement Dakar Summit", tag: "Événement", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80" },
 ];
 
 const marqueeItems = ["Impression", "Signalétique", "Goodies", "Web Design", "Vidéo", "Événements", "Branding", "Roll-ups", "Motion Design", "Campagnes"];
@@ -67,12 +74,33 @@ function AnimatedCounter({ target, suffix }: { target: number; suffix: string })
   return <div ref={ref} className="text-4xl md:text-5xl font-heading font-bold text-secondary">{count}{suffix}</div>;
 }
 
+function LazyImage({ src, alt, className }: { src: string; alt: string; className?: string }) {
+  const [loaded, setLoaded] = useState(false);
+  return (
+    <div className="relative w-full h-full">
+      {!loaded && <Skeleton className="absolute inset-0 w-full h-full" />}
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        onLoad={() => setLoaded(true)}
+        className={`${className ?? ""} ${loaded ? "opacity-100" : "opacity-0"} transition-opacity duration-500`}
+      />
+    </div>
+  );
+}
+
 const Index = () => {
   return (
     <div className="overflow-hidden">
       {/* Hero */}
-      <section className="relative min-h-screen flex items-center bg-primary text-primary-foreground">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-[hsl(228,85%,18%)]" />
+      <section className="relative min-h-screen flex items-center">
+        <img
+          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=80"
+          alt="Équipe créative africaine au travail dans une agence moderne"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(228,85%,24%/0.85)] via-[hsl(228,85%,24%/0.6)] to-transparent" />
         <div className="container mx-auto px-4 relative z-10 py-32">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -80,10 +108,10 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight mb-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight mb-6 text-primary-foreground">
               Donnez de la voix <br />à votre <span className="text-secondary">marque.</span>
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/70 mb-8">
+            <p className="text-lg md:text-xl text-primary-foreground/80 mb-8">
               Impression · Signalétique · Goodies · Web · Événements · Vidéo
             </p>
             <div className="flex flex-wrap gap-4">
@@ -131,13 +159,18 @@ const Index = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                className="group bg-card rounded-xl p-6 shadow-sm border border-border hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                className="group bg-card rounded-xl overflow-hidden shadow-sm border border-border hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer"
               >
-                <div className="w-12 h-12 rounded-lg bg-primary/10 group-hover:bg-gradient-to-br group-hover:from-primary group-hover:to-secondary flex items-center justify-center mb-4 transition-all duration-300">
-                  <service.icon className="text-primary group-hover:text-primary-foreground transition-colors" size={24} />
+                <div className="aspect-[16/10] overflow-hidden">
+                  <LazyImage src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
-                <h3 className="font-heading font-bold text-lg mb-2">{service.title}</h3>
-                <p className="text-muted-foreground text-sm">{service.desc}</p>
+                <div className="p-5">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 group-hover:bg-gradient-to-br group-hover:from-primary group-hover:to-secondary flex items-center justify-center mb-3 transition-all duration-300">
+                    <service.icon className="text-primary group-hover:text-primary-foreground transition-colors" size={20} />
+                  </div>
+                  <h3 className="font-heading font-bold text-base mb-1.5">{service.title}</h3>
+                  <p className="text-muted-foreground text-sm">{service.desc}</p>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -176,11 +209,7 @@ const Index = () => {
             Projets en Vedette
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { title: "Branding TechSen", tag: "Identité Visuelle", color: "from-primary to-primary/70" },
-              { title: "Site Web SenBeauty", tag: "Web Design", color: "from-secondary to-secondary/70" },
-              { title: "Événement Dakar Summit", tag: "Événement", color: "from-primary to-secondary" },
-            ].map((project, i) => (
+            {featuredProjects.map((project, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
@@ -189,8 +218,8 @@ const Index = () => {
                 transition={{ delay: i * 0.1 }}
                 className="group relative rounded-xl overflow-hidden aspect-[4/3] cursor-pointer"
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${project.color}`} />
-                <div className="absolute inset-0 bg-foreground/20 group-hover:bg-foreground/40 transition-colors" />
+                <LazyImage src={project.image} alt={project.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-foreground/30 group-hover:bg-foreground/50 transition-colors" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-primary-foreground">
                   <span className="text-xs font-medium bg-secondary/80 px-2 py-1 rounded">{project.tag}</span>
                   <h3 className="font-heading font-bold text-xl mt-2">{project.title}</h3>
@@ -248,9 +277,7 @@ const Index = () => {
               >
                 <p className="text-muted-foreground italic mb-6">"{t.quote}"</p>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-heading font-bold text-sm">
-                    {t.name.charAt(0)}
-                  </div>
+                  <img src={t.avatar} alt={t.name} className="w-10 h-10 rounded-full object-cover" />
                   <div>
                     <p className="font-heading font-semibold text-sm">{t.name}</p>
                     <p className="text-xs text-muted-foreground">{t.company}</p>

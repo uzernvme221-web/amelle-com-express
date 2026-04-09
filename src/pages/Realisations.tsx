@@ -5,15 +5,15 @@ import { X } from "lucide-react";
 const categories = ["Tous", "Web", "Print", "Goodies", "Événements", "Vidéo", "Signalétique"];
 
 const projects = [
-  { title: "Site E-commerce ModaSen", client: "ModaSen", category: "Web", color: "from-primary to-primary/60" },
-  { title: "Brochure Corporate CBAO", client: "CBAO", category: "Print", color: "from-secondary to-secondary/60" },
-  { title: "Pack Goodies Tech Summit", client: "Tech Summit Dakar", category: "Goodies", color: "from-primary/80 to-secondary/80" },
-  { title: "Vidéo Institutionnelle Sonatel", client: "Sonatel", category: "Vidéo", color: "from-secondary to-primary" },
-  { title: "Enseigne Lumineuse Auchan", client: "Auchan Sénégal", category: "Signalétique", color: "from-primary to-primary/40" },
-  { title: "Gala Annuel BCEAO", client: "BCEAO", category: "Événements", color: "from-secondary/80 to-primary/80" },
-  { title: "Identité Visuelle StartupSen", client: "StartupSen", category: "Print", color: "from-primary/60 to-secondary" },
-  { title: "Landing Page PayTech", client: "PayTech", category: "Web", color: "from-secondary/60 to-primary/60" },
-  { title: "Motion Design Wave Digital", client: "Wave", category: "Vidéo", color: "from-primary to-secondary/50" },
+  { title: "Site E-commerce ModaSen", client: "ModaSen", category: "Web", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" },
+  { title: "Brochure Corporate CBAO", client: "CBAO", category: "Print", image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&q=80" },
+  { title: "Pack Goodies Tech Summit", client: "Tech Summit Dakar", category: "Goodies", image: "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=800&q=80" },
+  { title: "Vidéo Institutionnelle Sonatel", client: "Sonatel", category: "Vidéo", image: "https://images.unsplash.com/photo-1579165466741-7f35e4755660?w=800&q=80" },
+  { title: "Enseigne Lumineuse Auchan", client: "Auchan Sénégal", category: "Signalétique", image: "https://images.unsplash.com/photo-1528698827591-e625c338dea7?w=800&q=80" },
+  { title: "Gala Annuel BCEAO", client: "BCEAO", category: "Événements", image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&q=80" },
+  { title: "Identité Visuelle StartupSen", client: "StartupSen", category: "Print", image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&q=80" },
+  { title: "Landing Page PayTech", client: "PayTech", category: "Web", image: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=80" },
+  { title: "Motion Design Wave Digital", client: "Wave", category: "Vidéo", image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&q=80" },
 ];
 
 const Realisations = () => {
@@ -69,13 +69,13 @@ const Realisations = () => {
                 className="group relative rounded-xl overflow-hidden aspect-[4/3] cursor-pointer"
                 onClick={() => setLightboxIdx(i)}
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${project.color}`} />
+                <img src={project.image} alt={project.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/50 transition-colors flex items-center justify-center">
                   <span className="text-primary-foreground font-heading font-semibold opacity-0 group-hover:opacity-100 transition-opacity bg-secondary px-4 py-2 rounded-lg">
                     Voir le projet
                   </span>
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 p-4">
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-foreground/60 to-transparent">
                   <span className="text-xs bg-secondary/80 text-secondary-foreground px-2 py-1 rounded">{project.category}</span>
                   <h3 className="font-heading font-bold text-primary-foreground mt-2">{project.title}</h3>
                   {project.client && (
@@ -108,12 +108,11 @@ const Realisations = () => {
               className="max-w-3xl w-full aspect-[4/3] rounded-xl overflow-hidden"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className={`w-full h-full bg-gradient-to-br ${filtered[lightboxIdx]?.color} flex items-center justify-center`}>
-                <div className="text-center text-primary-foreground">
-                  <h2 className="font-heading font-bold text-3xl mb-2">{filtered[lightboxIdx]?.title}</h2>
-                  <p className="text-primary-foreground/70">{filtered[lightboxIdx]?.client}</p>
-                </div>
-              </div>
+              <img
+                src={filtered[lightboxIdx]?.image}
+                alt={filtered[lightboxIdx]?.title}
+                className="w-full h-full object-cover"
+              />
             </motion.div>
           </motion.div>
         )}

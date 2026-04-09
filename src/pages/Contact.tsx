@@ -37,8 +37,14 @@ const Contact = () => {
 
   return (
     <div>
-      <section className="pt-32 pb-16 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4">
+      <section className="relative pt-32 pb-16 text-primary-foreground">
+        <img
+          src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920&q=80"
+          alt="Professionnels africains au bureau"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-primary/85" />
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">Contactez-nous</h1>
             <p className="text-primary-foreground/70 max-w-2xl text-lg">
