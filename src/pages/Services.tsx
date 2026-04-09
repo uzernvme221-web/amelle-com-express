@@ -13,6 +13,7 @@ const services = [
     desc: "Marquez les esprits avec des objets personnalisés à l'image de votre entreprise. Nous proposons une large gamme de goodies de qualité pour vos événements, campagnes et cadeaux d'entreprise.",
     deliverables: ["Stylos et carnets personnalisés", "Mugs et thermos brandés", "Casquettes et textiles", "Clés USB et gadgets tech", "Tote bags et accessoires"],
     id: "goodies",
+    image: "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=800&q=80",
   },
   {
     icon: RectangleVertical,
@@ -20,6 +21,7 @@ const services = [
     desc: "Des supports visuels impactants pour vos salons, événements et points de vente. Impressions haute qualité sur des structures robustes et facilement transportables.",
     deliverables: ["Roll-ups standard et premium", "Kakémonos sur mesure", "X-banners et L-banners", "Structures d'exposition", "Bâches et banderoles"],
     id: "kakemonos",
+    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80",
   },
   {
     icon: Store,
@@ -27,6 +29,7 @@ const services = [
     desc: "Donnez de la visibilité à votre commerce avec une signalétique professionnelle. Nous concevons et installons des enseignes qui reflètent votre identité de marque.",
     deliverables: ["Enseignes lumineuses LED", "Lettres découpées en relief", "Panneaux publicitaires", "Habillage de façade complète", "Totems et pylônes"],
     id: "enseignes",
+    image: "https://images.unsplash.com/photo-1528698827591-e625c338dea7?w=800&q=80",
   },
   {
     icon: Printer,
@@ -34,6 +37,7 @@ const services = [
     desc: "Des impressions de qualité professionnelle pour tous vos supports de communication. Du petit au grand format, nous maîtrisons toutes les techniques d'impression.",
     deliverables: ["Flyers et dépliants", "Brochures et catalogues", "Cartes de visite premium", "Affiches et posters grand format", "Packaging personnalisé"],
     id: "impression",
+    image: "https://images.unsplash.com/photo-1588412079929-790b9f593d8e?w=800&q=80",
   },
   {
     icon: Globe,
@@ -41,6 +45,7 @@ const services = [
     desc: "Des sites web modernes, performants et optimisés pour convertir vos visiteurs en clients. Nous créons des expériences digitales uniques et adaptées à vos objectifs.",
     deliverables: ["Sites vitrine responsive", "Boutiques e-commerce", "Applications web sur mesure", "Référencement SEO", "Maintenance et hébergement"],
     id: "web",
+    image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80",
   },
   {
     icon: Video,
@@ -48,6 +53,7 @@ const services = [
     desc: "Racontez votre histoire en images et en mouvement. Nos vidéos captent l'attention et transmettent votre message avec impact et émotion.",
     deliverables: ["Spots publicitaires", "Vidéos corporate", "Animations motion design", "Contenus réseaux sociaux", "Montage et post-production"],
     id: "video",
+    image: "https://images.unsplash.com/photo-1579165466741-7f35e4755660?w=800&q=80",
   },
   {
     icon: Megaphone,
@@ -55,6 +61,7 @@ const services = [
     desc: "Stratégies publicitaires sur mesure pour maximiser votre visibilité et votre retour sur investissement. Campagnes digitales et traditionnelles.",
     deliverables: ["Stratégie de marque", "Campagnes réseaux sociaux", "Google Ads et Meta Ads", "Affichage urbain", "Relations presse"],
     id: "publicite",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
   },
   {
     icon: CalendarDays,
@@ -62,6 +69,7 @@ const services = [
     desc: "De la conception à la réalisation, nous organisons des événements mémorables qui reflètent vos valeurs et marquent les esprits de vos invités.",
     deliverables: ["Événements corporate", "Lancements de produits", "Conférences et séminaires", "Team building", "Décoration et scénographie"],
     id: "evenements",
+    image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&q=80",
   },
 ];
 
@@ -132,7 +140,14 @@ const Services = () => {
                   </Button>
                 </div>
                 <div className="flex-1 w-full">
-                  <div className={`aspect-[4/3] rounded-xl bg-gradient-to-br ${i % 2 === 0 ? "from-primary/20 to-secondary/20" : "from-secondary/20 to-primary/20"}`} />
+                  <div className="aspect-[4/3] rounded-xl overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      loading="lazy"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
               </motion.section>
             ))}

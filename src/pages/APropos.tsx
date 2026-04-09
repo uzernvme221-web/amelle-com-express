@@ -9,10 +9,10 @@ const values = [
 ];
 
 const team = [
-  { name: "Amelle Diop", role: "Directrice Générale", initials: "AD" },
-  { name: "Ibrahima Fall", role: "Directeur Artistique", initials: "IF" },
-  { name: "Mariama Ba", role: "Responsable Communication", initials: "MB" },
-  { name: "Ousmane Sy", role: "Chef de Projet Digital", initials: "OS" },
+  { name: "Amelle Diop", role: "Directrice Générale", image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=400&fit=crop&q=80" },
+  { name: "Ibrahima Fall", role: "Directeur Artistique", image: "https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?w=400&h=400&fit=crop&q=80" },
+  { name: "Mariama Ba", role: "Responsable Communication", image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&h=400&fit=crop&q=80" },
+  { name: "Ousmane Sy", role: "Chef de Projet Digital", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&q=80" },
 ];
 
 const timeline = [
@@ -65,7 +65,14 @@ const APropos = () => {
               viewport={{ once: true }}
               className="flex-1"
             >
-              <div className="aspect-[4/3] rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20" />
+              <div className="aspect-[4/3] rounded-xl overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80"
+                  alt="Entrepreneur africain dans un bureau créatif"
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </motion.div>
           </div>
         </div>
@@ -110,8 +117,13 @@ const APropos = () => {
                 transition={{ delay: i * 0.1 }}
                 className="text-center group"
               >
-                <div className="w-32 h-32 rounded-full bg-primary mx-auto mb-4 flex items-center justify-center group-hover:bg-secondary transition-colors">
-                  <span className="text-primary-foreground font-heading font-bold text-2xl">{member.initials}</span>
+                <div className="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
                 <h3 className="font-heading font-bold text-lg">{member.name}</h3>
                 <p className="text-muted-foreground text-sm">{member.role}</p>
