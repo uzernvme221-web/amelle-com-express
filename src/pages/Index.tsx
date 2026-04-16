@@ -21,6 +21,11 @@ import serviceEvents from "@/assets/service-events.jpg";
 import avatarWoman1 from "@/assets/avatar-woman-1.jpg";
 import avatarMan1 from "@/assets/avatar-man-1.jpg";
 import avatarWoman2 from "@/assets/avatar-woman-2.jpg";
+import clientSonatel from "@/assets/clients/sonatel.png";
+import clientOrange from "@/assets/clients/orange.svg";
+import clientCheds from "@/assets/clients/cheds.png";
+import clientArmee from "@/assets/clients/armee.png";
+import clientJet from "@/assets/clients/jet.png";
 
 const services = [
   { icon: Gift, title: "Goodies & Objets Publicitaires", desc: "Stylos, mugs, casquettes, clés USB, tote bags personnalisés.", image: serviceGoodies },
@@ -261,11 +266,21 @@ const Index = () => {
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <h3 className="text-center text-muted-foreground font-heading font-semibold mb-10">Ils nous font confiance</h3>
-          <div className="flex flex-wrap justify-center gap-12 items-center">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <div key={i} className="w-24 h-12 bg-border/50 rounded-lg flex items-center justify-center text-muted-foreground text-xs font-medium">
-                Client {i + 1}
-              </div>
+          <div className="flex flex-wrap justify-center gap-x-12 gap-y-8 items-center">
+            {[
+              { src: clientSonatel, alt: "Sonatel" },
+              { src: clientOrange, alt: "Orange" },
+              { src: clientCheds, alt: "CHEDS" },
+              { src: clientArmee, alt: "État-Major Général des Armées Sénégalaises" },
+              { src: clientJet, alt: "Jet Contractors" },
+            ].map((c) => (
+              <img
+                key={c.alt}
+                src={c.src}
+                alt={`Logo ${c.alt}`}
+                loading="lazy"
+                className="h-12 md:h-14 w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"
+              />
             ))}
           </div>
         </div>
