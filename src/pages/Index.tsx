@@ -21,6 +21,11 @@ import serviceEvents from "@/assets/service-events.jpg";
 import avatarWoman1 from "@/assets/avatar-woman-1.jpg";
 import avatarMan1 from "@/assets/avatar-man-1.jpg";
 import avatarWoman2 from "@/assets/avatar-woman-2.jpg";
+import clientSonatel from "@/assets/clients/sonatel.png";
+import clientOrange from "@/assets/clients/orange.svg";
+import clientCheds from "@/assets/clients/cheds.png";
+import clientArmee from "@/assets/clients/armee.png";
+import clientJet from "@/assets/clients/jet.png";
 
 const services = [
   { icon: Gift, title: "Goodies & Objets Publicitaires", desc: "Stylos, mugs, casquettes, clés USB, tote bags personnalisés.", image: serviceGoodies },
