@@ -9,16 +9,28 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Skeleton } from "@/components/ui/skeleton";
+import heroAgency from "@/assets/hero-agency.jpg";
+import serviceGoodies from "@/assets/service-goodies.jpg";
+import serviceRollups from "@/assets/service-rollups.jpg";
+import serviceSignage from "@/assets/service-signage.jpg";
+import servicePrinting from "@/assets/service-printing.jpg";
+import serviceWeb from "@/assets/service-web.jpg";
+import serviceVideo from "@/assets/service-video.jpg";
+import serviceAds from "@/assets/service-ads.jpg";
+import serviceEvents from "@/assets/service-events.jpg";
+import avatarWoman1 from "@/assets/avatar-woman-1.jpg";
+import avatarMan1 from "@/assets/avatar-man-1.jpg";
+import avatarWoman2 from "@/assets/avatar-woman-2.jpg";
 
 const services = [
-  { icon: Gift, title: "Goodies & Objets Publicitaires", desc: "Stylos, mugs, casquettes, clés USB, tote bags personnalisés.", image: "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=600&q=80" },
-  { icon: RectangleVertical, title: "Kakémonos & Roll-ups", desc: "Supports visuels pour vos événements et points de vente.", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" },
-  { icon: Store, title: "Enseignes & Façades", desc: "Signalétique extérieure et intérieure, enseignes lumineuses.", image: "https://images.unsplash.com/photo-1528698827591-e625c338dea7?w=600&q=80" },
-  { icon: Printer, title: "Impression & Printing", desc: "Flyers, brochures, cartes de visite, affiches grand format.", image: "https://images.unsplash.com/photo-1588412079929-790b9f593d8e?w=600&q=80" },
-  { icon: Globe, title: "Création de Sites Web", desc: "Sites vitrine, e-commerce, applications web sur mesure.", image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&q=80" },
-  { icon: Video, title: "Vidéos & Motion Design", desc: "Spots publicitaires, animations, contenus pour réseaux sociaux.", image: "https://images.unsplash.com/photo-1579165466741-7f35e4755660?w=600&q=80" },
-  { icon: Megaphone, title: "Publicité & Campagnes", desc: "Stratégie de marque, campagnes digitales et traditionnelles.", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" },
-  { icon: CalendarDays, title: "Organisation d'Événements", desc: "Événements corporate, lancements de produits, conférences.", image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&q=80" },
+  { icon: Gift, title: "Goodies & Objets Publicitaires", desc: "Stylos, mugs, casquettes, clés USB, tote bags personnalisés.", image: serviceGoodies },
+  { icon: RectangleVertical, title: "Kakémonos & Roll-ups", desc: "Supports visuels pour vos événements et points de vente.", image: serviceRollups },
+  { icon: Store, title: "Enseignes & Façades", desc: "Signalétique extérieure et intérieure, enseignes lumineuses.", image: serviceSignage },
+  { icon: Printer, title: "Impression & Printing", desc: "Flyers, brochures, cartes de visite, affiches grand format.", image: servicePrinting },
+  { icon: Globe, title: "Création de Sites Web", desc: "Sites vitrine, e-commerce, applications web sur mesure.", image: serviceWeb },
+  { icon: Video, title: "Vidéos & Motion Design", desc: "Spots publicitaires, animations, contenus pour réseaux sociaux.", image: serviceVideo },
+  { icon: Megaphone, title: "Publicité & Campagnes", desc: "Stratégie de marque, campagnes digitales et traditionnelles.", image: serviceAds },
+  { icon: CalendarDays, title: "Organisation d'Événements", desc: "Événements corporate, lancements de produits, conférences.", image: serviceEvents },
 ];
 
 const stats = [
@@ -29,15 +41,15 @@ const stats = [
 ];
 
 const testimonials = [
-  { name: "Fatou Diallo", company: "TechSen Solutions", quote: "Amelle Com a transformé notre image de marque. Un travail remarquable et un professionnalisme exemplaire.", avatar: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=100&h=100&fit=crop&q=80" },
-  { name: "Moussa Ndiaye", company: "Dakar Logistics", quote: "De la conception à la livraison, l'équipe a su répondre à toutes nos attentes avec créativité et rigueur.", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&q=80" },
-  { name: "Aminata Sow", company: "SenBeauty", quote: "Notre site web et nos supports de communication sont exceptionnels. Je recommande vivement Amelle Com.", avatar: "https://images.unsplash.com/photo-1589156229687-496a31ad1d1f?w=100&h=100&fit=crop&q=80" },
+  { name: "Fatou Diallo", company: "TechSen Solutions", quote: "Amelle Com a transformé notre image de marque. Un travail remarquable et un professionnalisme exemplaire.", avatar: avatarWoman1 },
+  { name: "Moussa Ndiaye", company: "Dakar Logistics", quote: "De la conception à la livraison, l'équipe a su répondre à toutes nos attentes avec créativité et rigueur.", avatar: avatarMan1 },
+  { name: "Aminata Sow", company: "SenBeauty", quote: "Notre site web et nos supports de communication sont exceptionnels. Je recommande vivement Amelle Com.", avatar: avatarWoman2 },
 ];
 
 const featuredProjects = [
-  { title: "Branding TechSen", tag: "Identité Visuelle", image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&q=80" },
-  { title: "Site Web SenBeauty", tag: "Web Design", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" },
-  { title: "Événement Dakar Summit", tag: "Événement", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80" },
+  { title: "Branding TechSen", tag: "Identité Visuelle", image: serviceAds },
+  { title: "Site Web SenBeauty", tag: "Web Design", image: serviceWeb },
+  { title: "Événement Dakar Summit", tag: "Événement", image: serviceEvents },
 ];
 
 const marqueeItems = ["Impression", "Signalétique", "Goodies", "Web Design", "Vidéo", "Événements", "Branding", "Roll-ups", "Motion Design", "Campagnes"];
@@ -96,8 +108,8 @@ const Index = () => {
       {/* Hero */}
       <section className="relative min-h-screen flex items-center">
         <img
-          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=80"
-          alt="Équipe créative africaine au travail dans une agence moderne"
+          src={heroAgency}
+          alt="Équipe créative africaine au travail dans une agence moderne à Dakar"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[hsl(228,85%,24%/0.85)] via-[hsl(228,85%,24%/0.6)] to-transparent" />

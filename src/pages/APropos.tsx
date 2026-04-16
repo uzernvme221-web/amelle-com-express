@@ -1,6 +1,11 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Lightbulb, Heart, Star } from "lucide-react";
+import team1 from "@/assets/team-1.jpg";
+import team2 from "@/assets/team-2.jpg";
+import team3 from "@/assets/team-3.jpg";
+import team4 from "@/assets/team-4.jpg";
+import aboutTeam from "@/assets/about-team.jpg";
 
 const values = [
   { icon: Lightbulb, title: "Créativité", desc: "Des idées originales et innovantes pour chaque projet. Nous repoussons les limites de la créativité." },
@@ -9,10 +14,10 @@ const values = [
 ];
 
 const team = [
-  { name: "Amelle Diop", role: "Directrice Générale", image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=400&fit=crop&q=80" },
-  { name: "Ibrahima Fall", role: "Directeur Artistique", image: "https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?w=400&h=400&fit=crop&q=80" },
-  { name: "Mariama Ba", role: "Responsable Communication", image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&h=400&fit=crop&q=80" },
-  { name: "Ousmane Sy", role: "Chef de Projet Digital", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&q=80" },
+  { name: "Amelle Diop", role: "Directrice Générale", image: team1 },
+  { name: "Ibrahima Fall", role: "Directeur Artistique", image: team2 },
+  { name: "Mariama Ba", role: "Responsable Communication", image: team3 },
+  { name: "Ousmane Sy", role: "Chef de Projet Digital", image: team4 },
 ];
 
 const timeline = [
@@ -67,8 +72,8 @@ const APropos = () => {
             >
               <div className="aspect-[4/3] rounded-xl overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80"
-                  alt="Entrepreneur africain dans un bureau créatif"
+                  src={aboutTeam}
+                  alt="Équipe créative africaine d'Amelle Com dans un studio moderne à Dakar"
                   loading="lazy"
                   className="w-full h-full object-cover"
                 />
