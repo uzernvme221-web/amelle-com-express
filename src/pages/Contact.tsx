@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
+import contactBg from "@/assets/contact-bg.jpg";
 
 const services = [
   "Goodies & Objets Publicitaires",
@@ -39,8 +40,8 @@ const Contact = () => {
     <div>
       <section className="relative pt-32 pb-16 text-primary-foreground">
         <img
-          src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920&q=80"
-          alt="Professionnels africains au bureau"
+          src={contactBg}
+          alt="Professionnelle africaine souriante au téléphone dans un bureau moderne"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-primary/85" />
