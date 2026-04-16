@@ -14,17 +14,17 @@ const values = [
 ];
 
 const team = [
-  { name: "Amelle Diop", role: "Directrice Générale", image: team1 },
+  { name: "Madeleine Koite", role: "Directrice Générale", image: team1 },
   { name: "Ibrahima Fall", role: "Directeur Artistique", image: team2 },
-  { name: "Mariama Ba", role: "Responsable Communication", image: team3 },
+  { name: "Bachir Sarre", role: "Responsable Communication", image: team2 },
   { name: "Ousmane Sy", role: "Chef de Projet Digital", image: team4 },
 ];
 
 const timeline = [
-  { year: "2017", title: "Fondation", desc: "Création d'Amelle Com à Dakar avec une vision claire : transformer la communication des entreprises sénégalaises." },
-  { year: "2019", title: "Expansion", desc: "Élargissement de nos services au digital et à l'événementiel. Première équipe de 10 collaborateurs." },
-  { year: "2021", title: "Reconnaissance", desc: "Plus de 200 clients accompagnés. Partenariats avec des entreprises internationales." },
-  { year: "2024", title: "Innovation", desc: "Lancement de notre pôle vidéo et motion design. Nouvelles technologies d'impression." },
+  { year: "2005", title: "Fondation", desc: "Création d'Amelle Com à Dakar avec une vision claire : transformer la communication des entreprises sénégalaises." },
+  { year: "2012", title: "Expansion", desc: "Élargissement de nos services au digital et à l'événementiel. Renforcement de notre équipe créative." },
+  { year: "2018", title: "Reconnaissance", desc: "Plus de 200 clients accompagnés. Partenariats avec des entreprises internationales et institutions publiques." },
+  { year: "2024", title: "Innovation", desc: "Lancement de notre pôle vidéo et motion design. Nouvelles technologies d'impression grand format." },
 ];
 
 const APropos = () => {
@@ -58,7 +58,7 @@ const APropos = () => {
             >
               <h2 className="text-3xl font-heading font-bold mb-6">Notre Histoire</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Fondée en 2017 à Dakar, Amelle Com est née de la volonté de proposer des solutions de communication globales, créatives et accessibles aux entreprises sénégalaises et africaines.
+                Fondée en 2005 à Dakar, Amelle Com est née de la volonté de proposer des solutions de communication globales, créatives et accessibles aux entreprises sénégalaises et africaines. Depuis près de deux décennies, nous accompagnons la croissance des marques sur tout le continent.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 De l'impression traditionnelle au marketing digital, nous avons su évoluer avec les besoins de nos clients pour devenir une agence de référence dans la sous-région. Notre force réside dans notre capacité à allier créativité locale et standards internationaux.
