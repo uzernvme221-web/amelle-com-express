@@ -131,7 +131,7 @@ const Index = () => {
                 <Link to="/services">Nos Services</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground font-heading font-semibold">
-                <Link to="/catalogues">Voir nos Catalogues</Link>
+                <Link to="/contact">Demander un devis</Link>
               </Button>
             </div>
           </motion.div>
@@ -242,17 +242,17 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Catalogue CTA */}
+      {/* Devis CTA */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-secondary-foreground mb-4">
-            Consultez nos catalogues produits
+            Un projet en tête ? Demandez votre devis
           </h2>
           <p className="text-secondary-foreground/80 mb-8 max-w-xl mx-auto">
-            Découvrez notre large gamme de goodies, impressions et supports de communication.
+            Parlez-nous de votre besoin et recevez une proposition personnalisée sous 24h.
           </p>
           <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-heading font-semibold">
-            <Link to="/catalogues">Voir les Catalogues</Link>
+            <Link to="/contact">Demander un devis</Link>
           </Button>
         </div>
       </section>

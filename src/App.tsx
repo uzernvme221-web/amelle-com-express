@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 import FloatingDevisButton from "./components/FloatingDevisButton";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
-import Catalogues from "./pages/Catalogues";
+
 import Realisations from "./pages/Realisations";
 import APropos from "./pages/APropos";
 import Contact from "./pages/Contact";
@@ -27,7 +27,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/services" element={<Services />} />
-            <Route path="/catalogues" element={<Catalogues />} />
+            
             <Route path="/realisations" element={<Realisations />} />
             <Route path="/a-propos" element={<APropos />} />
             <Route path="/contact" element={<Contact />} />
