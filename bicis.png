@@ -1,41 +1,269 @@
-<!DOCTYPE html>
-<html lang="en">
-<meta charset="utf-8">
-<title>Wikimedia Error</title>
-<style>
-* { margin: 0; padding: 0; }
-body { background: #fff; font: 15px/1.6 sans-serif; color: #333; }
-.content { margin: 7% auto 0; padding: 2em 1em 1em; max-width: 640px; display: flex; flex-direction: row; flex-wrap: wrap; }
-.footer { clear: both; margin-top: 14%; border-top: 1px solid #e5e5e5; background: #f9f9f9; padding: 2em 0; font-size: 0.8em; text-align: center; }
-img { margin: 0 2em 2em 0; }
-a img { border: 0; }
-h1 { margin-top: 1em; font-size: 1.2em; }
-.content-text { flex: 1; }
-p { margin: 0.7em 0 1em 0; }
-a { color: #0645ad; text-decoration: none; }
-a:hover { text-decoration: underline; }
-code { font-family: sans-serif; }
-summary { font-weight: bold; cursor: pointer; }
-details[open] { background: #970302; color: #dfdedd; }
-.text-muted { color: #777; }
-@media (prefers-color-scheme: dark) {
-  a { color: #9e9eff; }
-  body { background: transparent; color: #ddd; }
-  .footer { border-top: 1px solid #444; background: #060606; }
-  #logo { filter: invert(1) hue-rotate(180deg); }
-  .text-muted { color: #888; }
-}
-</style>
-<meta name="color-scheme" content="light dark">
-<div class="content" role="main">
-<a href="https://www.wikimedia.org"><img id="logo" src="https://www.wikimedia.org/static/images/wmf-logo.png" srcset="https://www.wikimedia.org/static/images/wmf-logo-2x.png 2x" alt="Wikimedia" width="135" height="101">
-</a>
-<div class="content-text">
-<h1>Error</h1>
+<!doctype html>
+<html lang="en-gb" dir="ltr">
+	<head>
+				<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<script async src="https://www.google.com/recaptcha/api.js"></script>
+		<meta charset="utf-8" />
+	<base href="https://www.senegel.org/en/images/easyblog_articles/597/b2ap3_large_BICIS-Logo.jpg" />
+	<meta name="keywords" content="Senegal, Leaders, Organisations, Universities, Culture, Legislation, Good governance, ethical practices, Regions, Districts, Mayors" />
+	<meta name="rights" content="SENEGEL - Senegalese Next Generation of Leaders" />
+	<meta name="description" content="SENEGEL is open data platform that allows anyone to follow Senegalese's legislation, diplomacy, economy, and culture." />
+	<meta name="generator" content="Helix Ultimate - The Most Popular Joomla! Template Framework." />
+	<title>SENEGEL Platform</title>
+	<link href="https://www.senegel.org/fr/" rel="alternate" hreflang="fr-FR" />
+	<link href="https://www.senegel.org/en/" rel="alternate" hreflang="en-GB" />
+	<link href="/images/logo1.png" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/templates/shaper_helixultimate/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="/plugins/system/helixultimate/assets/css/system-j3.min.css" rel="stylesheet" />
+	<link href="/templates/shaper_helixultimate/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/templates/shaper_helixultimate/css/v4-shims.min.css" rel="stylesheet" />
+	<link href="/templates/shaper_helixultimate/css/template.css" rel="stylesheet" />
+	<link href="/templates/shaper_helixultimate/css/presets/default.css" rel="stylesheet" />
+	<link href="/templates/shaper_helixultimate/css/uikit.css" rel="stylesheet" />
+	<link href="/templates/shaper_helixultimate/css/custom.css" rel="stylesheet" />
+	<link href="/media/plg_sociallogin_facebook/css/button.css?b40846f130e6f4d188b648e767fe3ba1" rel="stylesheet" />
+	<link href="/media/mod_languages/css/template.css?685656e951b58f2c39709a4ed5ee1465" rel="stylesheet" />
+	<style>
+body {background: url('/images/background.png');}
+.sp-megamenu-parent .sp-dropdown .sp-dropdown-inner {background: #1f6334}h1{font-family: 'Arial', sans-serif;text-decoration: none;}
+.logo-image {height:120px;}.logo-image-phone {height:120px;}.logo-image {height:120px;}.logo-image-phone {height:120px;}.logo-image {height:120px;}.logo-image-phone {height:120px;}.logo-image {height:120px;}.logo-image-phone {height:120px;}
+	</style>
+	<script type="application/json" class="joomla-script-options new">{"data":{"breakpoints":{"tablet":991,"mobile":480},"header":{"stickyOffset":"100"}},"csrf.token":"e94f8851fadfd8871153531f6ae66452","system.paths":{"root":"","base":""}}</script>
+	<script src="/media/jui/js/jquery.min.js?685656e951b58f2c39709a4ed5ee1465"></script>
+	<script src="/media/jui/js/jquery-noconflict.js?685656e951b58f2c39709a4ed5ee1465"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js?685656e951b58f2c39709a4ed5ee1465"></script>
+	<script src="/templates/shaper_helixultimate/js/bootstrap.bundle.min.js"></script>
+	<script src="/templates/shaper_helixultimate/js/main.js"></script>
+	<script src="/templates/shaper_helixultimate/js/uikit.min.js"></script>
+	<script src="/templates/shaper_helixultimate/js/uikit-icons.min.js"></script>
+	<script src="/media/system/js/core.js?685656e951b58f2c39709a4ed5ee1465"></script>
+	<script>
+template="shaper_helixultimate";
+	</script>
+	<link href="https://www.senegel.org/en/" rel="alternate" hreflang="x-default" />
+	</head>
+	<body class="site helix-ultimate hu com-sppagebuilder view- layout-default task-none itemid-114 en-gb ltr sticky-header layout-fluid offcanvas-init offcanvs-position-right">
 
-<p>Use thumbnail steps listed on https://w.wiki/GHai. Please contact noc@wikimedia.org for further information (a765913)</p>
+		
+		
+		<div class="body-wrapper">
+			<div class="body-innerwrapper">
+				<div id="sp-top-bar"><div class="container"><div class="container-inner"><div class="row"><div id="sp-top1" class="col-12 col-md-4 col-xl-4"><div class="sp-column text-center text-lg-start"><div class="sp-module "><div class="sp-module-content"><div class="mod-languages">
+
+	<ul class="lang-inline">
+						<li dir="ltr">
+			<a href="/fr/">
+												<img src="/media/mod_languages/images/fr_fr.gif" alt="Française" title="Française" />										</a>
+			</li>
+								<li class="lang-active" dir="ltr">
+			<a href="/en/">
+												<img src="/media/mod_languages/images/en.gif" alt="English" title="English" />										</a>
+			</li>
+				</ul>
+
+</div>
+</div></div><ul class="social-icons"><li class="social-icon-facebook"><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/SENEGEL.ORG" aria-label="Facebook"><span class="fab fa-facebook" aria-hidden="true"></span></a></li><li class="social-icon-twitter"><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/senegel" aria-label="Twitter"><span class="fab fa-twitter" aria-hidden="true"></span></a></li><li class="social-icon-youtube"><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCH4rDgd40hh8fXGeBk0Q2VQ" aria-label="Youtube"><span class="fab fa-youtube" aria-hidden="true"></span></a></li><li class="social-icon-linkedin"><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/grps/SENEGEL-Senegalese-Next-Generation-Leaders-3477970/about?" aria-label="Linkedin"><span class="fab fa-linkedin" aria-hidden="true"></span></a></li></ul></div></div><div id="sp-top2" class="col-12 col-md-8 col-xl-8 d-flex" style="justify-content:flex-end"><div class="sp-column text-center text-lg-end d-flex"><div class="sp-module  cp-request-info"><div class="sp-module-content">
+
+<div class="custom cp-request-info"  >
+	<div><a class="" href="https://www.senegel.org/request-information">Request Information</a></div></div>
+</div></div><ul class="sp-contact-info"><li class="sp-contact-phone"><span class="fas fa-phone" aria-hidden="true"></span> <a href="tel:WhatsApp/TEL:+221778533399">WhatsApp/TEL: +221 77 853 33 99</a></li><li class="sp-contact-email"><span class="far fa-envelope" aria-hidden="true"></span> <a href="mailto:contact@senegel.org">contact@senegel.org</a></li></ul></div></div></div></div></div></div></div><div id="sp-headerbar" class=" d-none d-lg-block "><div class="container"><div class="container-inner"><div class="row"><div id="sp-logo" class="my-auto col-12 col-md-2 "><div class="sp-column "><div class="logo"><a href="/">
+				<img class='logo-image  d-none d-lg-inline-block'
+					srcset='https://www.senegel.org/images/logo1.png 1x'
+					src='https://www.senegel.org/images/logo1.png'
+					alt='SENEGEL - Senegalese Next Generation of Leaders'
+				/>
+				<img class="logo-image-phone d-inline-block d-lg-none" src="https://www.senegel.org/images/logo1.png" alt="SENEGEL - Senegalese Next Generation of Leaders" /></a></div></div></div><div id="" class=" d-none d-lg-block col-12 col-md-8"></div><div id="" class=" d-none d-lg-block my-auto col-12 col-md-2"><div class="sp-module "><div class="sp-module-content">
+
+<div class="custom"  >
+	<a href='/users/signinout'  class='uk-button uk-button-primary uk-width-1-1 uk-button-small'><span uk-icon='icon:sign-in'></span> Sign In</a><div class="akeeba-sociallogin-buttons">
+    <a class="btn btn-default akeeba-sociallogin-button akeeba-sociallogin-button-facebook hasTooltip"
+   id="akeeba-sociallogin-gLZpDSX80Kq1-cjfzqm4b"
+   href="http://www.facebook.com/dialog/oauth?response_type=code&client_id=1525349227987394&redirect_uri=https%3A%2F%2Fwww.senegel.org%2Findex.php%3Foption%3Dcom_ajax%26group%3Dsociallogin%26plugin%3Dfacebook%26format%3Draw&scope=public_profile%2Cemail" title="Login with your Facebook account. A new account will be created if no matching account exists on our site.">
+			<img src="/media/plg_sociallogin_facebook/images/fb_white_29.png" alt="" />		Login with Facebook</a>
+    <a class="btn btn-default akeeba-sociallogin-button akeeba-sociallogin-button-google hasTooltip"
+   id="akeeba-sociallogin-1jTTJMx6QkMS-rEIvPvfW"
+   href="https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=587933544893-3qr92tde21nllheqfohl1lpv45dpllni.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fwww.senegel.org%2Findex.php%3Foption%3Dcom_ajax%26group%3Dsociallogin%26plugin%3Dgoogle%26format%3Draw&scope=profile%20email&access_type=online&include_granted_scopes=true&prompt=select_account" title="Login with your Google account. A new account will be created if no matching account exists on our site.">
+			<img src="/media/plg_sociallogin_google/images/google.png" alt="" />		Sign in with Google</a>
 </div>
 </div>
-<div class="footer"><p>If you report this error to the Wikimedia System Administrators, please include the details below.</p><p class="text-muted"><code>Request served via cp3076 cp3076, Varnish XID 344806932<br>Upstream caches: cp3076 int<br>Error: 429, Use thumbnail steps listed on https://w.wiki/GHai. Please contact noc@wikimedia.org for further information (a765913) at Fri, 17 Apr 2026 03:43:28 GMT<br><details><summary>Sensitive client information</summary>IP address: 2a07:8241:fff:1001:0:397:0:d67</details></code></p>
+</div></div></div></div></div></div></div><header id="sp-header"><div class="container"><div class="container-inner"><div id="header_row" class="row" style="display: flex; align-content: center;"><div id="sp-logo" class="uk-inline col-9 d-lg-none"><div class="sp-column"><div class="logo"><a href="/">
+				<img class='logo-image  d-none d-lg-inline-block'
+					srcset='https://www.senegel.org/images/logo1.png 1x'
+					src='https://www.senegel.org/images/logo1.png'
+					alt='SENEGEL - Senegalese Next Generation of Leaders'
+				/>
+				<img class="logo-image-phone d-inline-block d-lg-none" src="https://www.senegel.org/images/logo1.png" alt="SENEGEL - Senegalese Next Generation of Leaders" /></a></div></div></div><div id="sp-menu" class="col-3 col-lg-12" style="display: flex; justify-content: center;"><div class="sp-column"><nav class="sp-megamenu-wrapper" role="navigation"><a id="offcanvas-toggler" aria-label="Navigation" class="offcanvas-toggler-left d-block d-lg-none" href="#" style="color: #ffffff;"><span class="fa fa-bars" aria-hidden="true" title="Navigation"  style="color: #ffffff;"></span></a><ul class="sp-megamenu-parent menu-animation-fade-up d-none d-lg-block"><li class="sp-menu-item current-item active"><a aria-current="page"  href="/en/" >Home</a></li><li class="sp-menu-item sp-has-child"><a   href="/en/senegal" >About Senegal</a><div class="sp-dropdown sp-dropdown-main sp-dropdown-mega sp-menu-right" style="width: 600px;"><div class="sp-dropdown-inner"><div class="row"><div class="col-sm-12"><ul class="sp-mega-group"><li class="item-289 module "><div class="sp-module "><div class="sp-module-content">
+
+<div class="custom"  >
+	<h6>Africa’s most western country and its history</h6>
 </div>
+</div></div></li></ul></div></div><div class="row"><div class="col-sm-4"><ul class="sp-mega-group"><li class="item-1258 menu_item item-header"><a   href="/en/senegal/regions" >Regions</a></li><li class="item-285 menu_item item-header"><a   href="/en/senegal/districts" >Districts</a></li><li class="item-1765 menu_item item-header"><a   href="/en/senegal/towns-db" >Towns</a></li><li class="item-1764 menu_item item-header"><a   href="/en/senegal/arrondissements-db" >Arrondissements</a></li><li class="item-2092 menu_item item-header"><a   href="/en/senegal/villages-db" >Villages / Quarter</a></li></ul></div><div class="col-sm-4"><ul class="sp-mega-group"><li class="item-1498 menu_item item-header"><a   href="/en/senegal/history-of-senegal" >History of Senegal</a></li><li class="item-1499 menu_item item-header"><a   href="/en/senegal/capital" >Capital</a></li><li class="item-297 menu_item item-header"><a   href="/en/senegal/issues" >Issues</a></li></ul></div><div class="col-sm-4"><ul class="sp-mega-group"><li class="item-1502 menu_item item-header"><a   href="/en/senegal/tourism-and-attraction" >Tourism and Attraction</a></li><li class="item-1500 menu_item item-header"><a   href="/en/senegal/climate" >Climate</a></li><li class="item-1503 menu_item item-header"><a   href="/en/senegal/economic-situation" >Economic Situation</a></li><li class="item-1501 menu_item item-header"></li></ul></div></div></div></div></li><li class="sp-menu-item sp-has-child"><a   href="/en/administration" >Administration</a><div class="sp-dropdown sp-dropdown-main sp-dropdown-mega sp-menu-right" style="width: 500px;"><div class="sp-dropdown-inner"><div class="row"><div class="col-sm-12"><ul class="sp-mega-group"><li class="item-294 module "><div class="sp-module "><div class="sp-module-content">
+
+<div class="custom"  >
+	<p></p>
+<h6>Senegal’s public administration and management</h6>
+<p></p></div>
+</div></div></li></ul></div></div><div class="row"><div class="col-sm-6"><ul class="sp-mega-group"><li class="item-1787 menu_item item-header"><a  class="sp-group-title" href="/en/administration/executive-power" >Executive Power</a><ul class="sp-mega-group-child sp-dropdown-items"><li class="sp-menu-item"><a   href="/en/administration/executive-power/president" >President</a></li><li class="sp-menu-item"><a   href="/en/administration/executive-power/governors" >Governors</a></li><li class="sp-menu-item"><a   href="/en/administration/executive-power/prime-minister" >Prime Minister</a></li><li class="sp-menu-item"><a   href="/en/administration/executive-power/ministers" >Ministers</a></li><li class="sp-menu-item"><a   href="/en/administration/executive-power/prefect" >Prefect</a></li><li class="sp-menu-item"><a   href="/en/administration/executive-power/mayors" >Mayors</a></li><li class="sp-menu-item"><a   href="/en/administration/executive-power/national-agencies" >National Agencies </a></li><li class="sp-menu-item"><a   href="/en/administration/executive-power/embassies-and-consulates-abroad" >Embassies and Consulates Abroad</a></li><li class="sp-menu-item"><a   href="/en/administration/executive-power/national-funds" >National Funds</a></li><li class="sp-menu-item"><a   href="/en/administration/executive-power/national-programs" >National Programs</a></li></ul></li><li class="item-1796 menu_item item-header"><a  class="sp-group-title" href="/en/administration/legislative-power" >Legislative Power</a><ul class="sp-mega-group-child sp-dropdown-items"><li class="sp-menu-item"><a   href="/en/administration/legislative-power/national-assembly" >National Assembly </a></li><li class="sp-menu-item"><a   href="/en/administration/legislative-power/council" >Economic, Social and Environnemental Council</a></li></ul></li><li class="item-1799 menu_item item-header"><a  class="sp-group-title" href="/en/administration/judicial-power" >Judicial Power</a><ul class="sp-mega-group-child sp-dropdown-items"><li class="sp-menu-item"><a   href="/en/administration/judicial-power/constitutional-council" >Constitutional Council</a></li><li class="sp-menu-item"><a   href="/en/administration/judicial-power/supreme-court" >Supreme Court</a></li><li class="sp-menu-item"><a   href="/en/administration/judicial-power/court-of-audit" >Court of audit </a></li><li class="sp-menu-item"><a   href="/en/administration/judicial-power/courts" >Courts </a></li></ul></li></ul></div><div class="col-sm-6"><ul class="sp-mega-group"><li class="item-1798 menu_item item-header"><a   href="/en/administration/legislative-power/council" >Economic, Social and Environnemental Council</a></li><li class="item-1804 menu_item item-header"><a  class="sp-group-title" href="/en/administration/foreign-representations" >Foreign Representations</a><ul class="sp-mega-group-child sp-dropdown-items"><li class="sp-menu-item"><a   href="/en/administration/foreign-representations/embassies-representations" >Embassies and Diplomatics Representations Accredited</a></li><li class="sp-menu-item"><a   href="/en/administration/foreign-representations/international-organizations" >International Organizations</a></li></ul></li></ul></div></div></div></div></li><li class="sp-menu-item sp-has-child"><a   href="/en/people-society" >People and Society</a><div class="sp-dropdown sp-dropdown-main sp-dropdown-mega sp-menu-right" style="width: 500px;"><div class="sp-dropdown-inner"><div class="row"><div class="col-sm-12"><ul class="sp-mega-group"><li class="item-293 module "><div class="sp-module "><div class="sp-module-content">
+
+<div class="custom"  >
+	<h6>Senegal’s culture, traditions, people and society</h6></div>
+</div></div></li></ul></div></div><div class="row"><div class="col-sm-6"><ul class="sp-mega-group"><li class="item-1859 menu_item item-header"><a   href="/en/people-society/society" >Society </a></li><li class="item-1860 menu_item item-header"><a   href="/en/people-society/media" >Media</a></li><li class="item-1861 menu_item item-header"><a   href="/en/people-society/universities-and-training-schools" >Universities and Training Schools</a></li><li class="item-1862 menu_item item-header"><a   href="/en/people-society/national-companies" >National Companies </a></li><li class="item-1863 menu_item item-header"><a   href="/en/people-society/foreign-companies" >Foreign Companies </a></li></ul></div><div class="col-sm-6"><ul class="sp-mega-group"><li class="item-1865 menu_item item-header"><a   href="/en/people-society/millionaires-and-billionaires" >Millionaires and Billionaires </a></li><li class="item-1866 menu_item item-header"><a   href="/en/people-society/celebrities" >Celebrities</a></li><li class="item-1867 menu_item item-header"><a   href="/en/people-society/business-leaders" >Business Leaders</a></li><li class="item-1868 menu_item item-header"><a   href="/en/people-society/religious-leaders" >Religious leaders </a></li><li class="item-1869 menu_item item-header"><a   href="/en/people-society/entrepreneurs" >Entrepreneurs</a></li></ul></div></div></div></div></li><li class="sp-menu-item sp-has-child"><a   href="/en/movements" >Movements and Politicals Parties</a><div class="sp-dropdown sp-dropdown-main sp-dropdown-mega sp-menu-right" style="width: 600px;"><div class="sp-dropdown-inner"><div class="row"><div class="col-sm-12"><ul class="sp-mega-group"><li class="item-292 module "><div class="sp-module "><div class="sp-module-content">
+
+<div class="custom"  >
+	<h6>Senegal’s civil society, political parties and Diaspora</h6></div>
+</div></div></li></ul></div></div><div class="row"><div class="col-sm-6"><ul class="sp-mega-group"><li class="item-1905 menu_item item-header"><a   href="/en/movements/citizen-movements" >Citizen Movements </a></li><li class="item-1906 menu_item item-header"><a   href="/en/movements/women-movements" >Women's Movements</a></li><li class="item-1907 menu_item item-header"><a   href="/en/movements/youth-movements" >Youth Movements </a></li></ul></div><div class="col-sm-6"><ul class="sp-mega-group"><li class="item-1908 menu_item item-header"><a   href="/en/movements/senegalese-diaspora-organizations" >Senegalese Diaspora Organizations </a></li><li class="item-1909 menu_item item-header"><a   href="/en/movements/political-parties" >Political Parties</a></li><li class="item-1913 menu_item item-header"><a   href="/en/movements/union" >Union</a></li></ul></div></div></div></div></li><li class="sp-menu-item sp-has-child"><a   href="/en/rate-review" >Rate &amp; Review</a><div class="sp-dropdown sp-dropdown-main sp-dropdown-mega sp-menu-right" style="width: 300px;"><div class="sp-dropdown-inner"><div class="row"><div class="col-sm-12"><ul class="sp-mega-group"><li class="item-291 module "><div class="sp-module "><div class="sp-module-content">
+
+<div class="custom"  >
+	<h6>Hold your Leaders and Organizations accountable</h6></div>
+</div></div></li></ul></div></div><div class="row"><div class="col-sm-12"><ul class="sp-mega-group"><li class="item-2268 menu_item item-header"><a   href="/en/senegal/people" >Your Representative</a></li><li class="item-2269 menu_item item-header"><a   href="/en/senegal/organizations" >Your Organization</a></li></ul></div></div></div></div></li><li class="sp-menu-item sp-has-child"><a   href="/en/why-senegel" >Why SENEGEL</a><div class="sp-dropdown sp-dropdown-main sp-dropdown-mega sp-menu-right" style="width: 300px;"><div class="sp-dropdown-inner"><div class="row"><div class="col-sm-12"><ul class="sp-mega-group"><li class="item-290 module "><div class="sp-module "><div class="sp-module-content">
+
+<div class="custom"  >
+	<h6>Know your issues, your representatives and make your voice count</h6></div>
+</div></div></li></ul></div></div><div class="row"><div class="col-sm-12"><ul class="sp-mega-group"><li class="item-1921 menu_item item-header"><a   href="/en/why-senegel/what-is-senegel" >What is SENEGEL</a></li><li class="item-1922 menu_item item-header"><a   href="/en/why-senegel/how-it-works" >How it Works</a></li></ul></div></div></div></div></li></ul></nav></div></div></div></div></div></header><div class="d-block d-lg-none uk-text-right" style="background: #246337"><div class="row"><div class="col-12 uk-text-center" style="color: #ffffff;"><div class="sp-module "><div class="sp-module-content">
+
+<div class="custom"  >
+	<a href='/users/signinout'  class='uk-button uk-width-1-2 uk-button-small'><span uk-icon='icon:sign-in'></span> Sign In</a></div>
+</div></div></div></div></div>				
+<section id="sp-section-3" >
+
+				
+	
+<div class="row">
+	<div id="sp-title" class="col-lg-12 "><div class="sp-column "></div></div></div>
+				
+</section>
+<section id="sp-main-body" >
+
+				
+	
+<div class="row">
+	
+<main id="sp-component" class="col-lg-12 ">
+	<div class="sp-column ">
+		<div id="system-message-container" aria-live="polite">
+				<div id="system-message">
+											<div class="alert alert-danger">
+										<a class="btn-close" data-bs-dismiss="alert" aria-label=""></a>
+
+											<h4 class="alert-heading">Error</h4>
+						<div>
+															<div>Page Not Found</div>
+													</div>
+									</div>
+					</div>
+		</div>
+
+
+		
+		
+
+			</div>
+</main>
+</div>
+				
+</section>
+<footer id="sp-footer" >
+
+						<div class="container">
+				<div class="container-inner">
+			
+	
+<div class="row">
+	<div id="sp-footer1" class="col-lg-6 "><div class="sp-column "><span class="sp-copyright">Liberte 5 No 5486B 4eme #10 Dakar, Senegal<br/>© 2024 All rights reserved. SENEGEL - Senegalese Next Generation of Leaders</span></div></div><div id="sp-footer2" class="col-lg-6 "><div class="sp-column "><div class="sp-module "><div class="sp-module-content"><ul class="menu">
+<li class="item-331"><a href="/en/sitemap-html" >Sitemap HTML</a></li><li class="item-2575"><a href="https://www.senegel.org/index.php?option=com_jmap&amp;view=sitemap&amp;format=xml&amp;lang=en" >Sitemap XML</a></li><li class="item-2629"><a href="/en/privacy-policy" >Privacy Policy</a></li><li class="item-2630"><a href="/en/terms-of-service" >Terms and Conditions</a></li></ul>
+</div></div><ul class="sp-contact-info"><li class="sp-contact-phone"><span class="fas fa-phone" aria-hidden="true"></span> <a href="tel:WhatsApp/TEL:+221778533399">WhatsApp/TEL: +221 77 853 33 99</a></li><li class="sp-contact-email"><span class="far fa-envelope" aria-hidden="true"></span> <a href="mailto:contact@senegel.org">contact@senegel.org</a></li></ul><ul class="social-icons"><li class="social-icon-facebook"><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/SENEGEL.ORG" aria-label="Facebook"><span class="fab fa-facebook" aria-hidden="true"></span></a></li><li class="social-icon-twitter"><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/senegel" aria-label="Twitter"><span class="fab fa-twitter" aria-hidden="true"></span></a></li><li class="social-icon-youtube"><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCH4rDgd40hh8fXGeBk0Q2VQ" aria-label="Youtube"><span class="fab fa-youtube" aria-hidden="true"></span></a></li><li class="social-icon-linkedin"><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/grps/SENEGEL-Senegalese-Next-Generation-Leaders-3477970/about?" aria-label="Linkedin"><span class="fab fa-linkedin" aria-hidden="true"></span></a></li></ul></div></div></div>
+							</div>
+			</div>
+			
+</footer>			</div>
+		</div>
+
+		<!-- Off Canvas Menu -->
+		<div class="offcanvas-overlay"></div>
+		<!-- Rendering the offcanvas style -->
+		<!-- If canvas style selected then render the style -->
+		<!-- otherwise (for old templates) attach the offcanvas module position -->
+					<div class="offcanvas-menu">
+	<div class="d-flex align-items-center p-3 pt-4">
+		<div class="logo"><a href="/">
+				<img class='logo-image  d-none d-lg-inline-block'
+					srcset='https://www.senegel.org/images/logo1.png 1x'
+					src='https://www.senegel.org/images/logo1.png'
+					alt='SENEGEL - Senegalese Next Generation of Leaders'
+				/>
+				<img class="logo-image-phone d-inline-block d-lg-none" src="https://www.senegel.org/images/logo1.png" alt="SENEGEL - Senegalese Next Generation of Leaders" /></a></div>		<a href="#" class="close-offcanvas" aria-label="Close Off-canvas">
+			<div class="burger-icon">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</a>
+	</div>
+	<div class="offcanvas-inner">
+		<div class="d-flex header-modules mb-3">
+			
+					</div>
+		
+					<div class="sp-module "><div class="sp-module-content">
+
+<div class="custom"  >
+	<a href='/users/signinout'  class='uk-button uk-button-primary uk-width-1-1 uk-button-small'><span uk-icon='icon:sign-in'></span> Sign In</a><div class="akeeba-sociallogin-buttons">
+    <a class="btn btn-default akeeba-sociallogin-button akeeba-sociallogin-button-facebook hasTooltip"
+   id="akeeba-sociallogin-aFUkKvaepwHb-3Vn5Opbm"
+   href="http://www.facebook.com/dialog/oauth?response_type=code&client_id=1525349227987394&redirect_uri=https%3A%2F%2Fwww.senegel.org%2Findex.php%3Foption%3Dcom_ajax%26group%3Dsociallogin%26plugin%3Dfacebook%26format%3Draw&scope=public_profile%2Cemail" title="Login with your Facebook account. A new account will be created if no matching account exists on our site.">
+			<img src="/media/plg_sociallogin_facebook/images/fb_white_29.png" alt="" />		Login with Facebook</a>
+    <a class="btn btn-default akeeba-sociallogin-button akeeba-sociallogin-button-google hasTooltip"
+   id="akeeba-sociallogin-uoPRCTCyBTEl-HydeE1fr"
+   href="https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=587933544893-3qr92tde21nllheqfohl1lpv45dpllni.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fwww.senegel.org%2Findex.php%3Foption%3Dcom_ajax%26group%3Dsociallogin%26plugin%3Dgoogle%26format%3Draw&scope=profile%20email&access_type=online&include_granted_scopes=true&prompt=select_account" title="Login with your Google account. A new account will be created if no matching account exists on our site.">
+			<img src="/media/plg_sociallogin_google/images/google.png" alt="" />		Sign in with Google</a>
+</div>
+</div>
+</div></div><div class="sp-module "><div class="sp-module-content"><ul class="menu">
+<li class="item-114 default current active"><a href="/en/" >Home</a></li><li class="item-1257 menu-deeper menu-parent"><a href="/en/senegal" >About Senegal<span class="menu-toggler"></span></a><ul class="menu-child"><li class="item-1500"><a href="/en/senegal/climate" >Climate</a></li><li class="item-1499"><a href="/en/senegal/capital" >Capital</a></li><li class="item-1502"><a href="/en/senegal/tourism-and-attraction" >Tourism and Attraction</a></li><li class="item-1503"><a href="/en/senegal/economic-situation" >Economic Situation</a></li><li class="item-297"><a href="/en/senegal/issues" >Issues</a></li><li class="item-1258"><a href="/en/senegal/regions" >Regions</a></li><li class="item-285"><a href="/en/senegal/districts" >Districts</a></li><li class="item-1764"><a href="/en/senegal/arrondissements-db" >Arrondissements</a></li><li class="item-1765"><a href="/en/senegal/towns-db" >Towns</a></li><li class="item-2092"><a href="/en/senegal/villages-db" >Villages / Quarter</a></li><li class="item-1498"><a href="/en/senegal/history-of-senegal" >History of Senegal</a></li></ul></li><li class="item-1786 menu-deeper menu-parent"><a href="/en/administration" >Administration<span class="menu-toggler"></span></a><ul class="menu-child"><li class="item-1796 menu-parent"><a href="/en/administration/legislative-power" >Legislative Power</a></li><li class="item-1799 menu-parent"><a href="/en/administration/judicial-power" >Judicial Power</a></li><li class="item-1804 menu-parent"><a href="/en/administration/foreign-representations" >Foreign Representations</a></li><li class="item-1787 menu-parent"><a href="/en/administration/executive-power" >Executive Power</a></li></ul></li><li class="item-1858 menu-deeper menu-parent"><a href="/en/people-society" >People and Society<span class="menu-toggler"></span></a><ul class="menu-child"><li class="item-1859"><a href="/en/people-society/society" >Society </a></li><li class="item-1860"><a href="/en/people-society/media" >Media</a></li><li class="item-1861"><a href="/en/people-society/universities-and-training-schools" >Universities and Training Schools</a></li><li class="item-1862"><a href="/en/people-society/national-companies" >National Companies </a></li><li class="item-1863"><a href="/en/people-society/foreign-companies" >Foreign Companies </a></li><li class="item-1865"><a href="/en/people-society/millionaires-and-billionaires" >Millionaires and Billionaires </a></li><li class="item-1866"><a href="/en/people-society/celebrities" >Celebrities</a></li><li class="item-1867"><a href="/en/people-society/business-leaders" >Business Leaders</a></li><li class="item-1868"><a href="/en/people-society/religious-leaders" >Religious leaders </a></li><li class="item-1869"><a href="/en/people-society/entrepreneurs" >Entrepreneurs</a></li></ul></li><li class="item-1904 menu-deeper menu-parent"><a href="/en/movements" >Movements and Politicals Parties<span class="menu-toggler"></span></a><ul class="menu-child"><li class="item-1905"><a href="/en/movements/citizen-movements" >Citizen Movements </a></li><li class="item-1906"><a href="/en/movements/women-movements" >Women's Movements</a></li><li class="item-1907"><a href="/en/movements/youth-movements" >Youth Movements </a></li><li class="item-1908"><a href="/en/movements/senegalese-diaspora-organizations" >Senegalese Diaspora Organizations </a></li><li class="item-1909"><a href="/en/movements/political-parties" >Political Parties</a></li><li class="item-1913"><a href="/en/movements/union" >Union</a></li></ul></li><li class="item-2267 menu-deeper menu-parent"><a href="/en/rate-review" >Rate &amp; Review<span class="menu-toggler"></span></a><ul class="menu-child"><li class="item-2268"><a href="/en/senegal/people" >Your Representative</a></li><li class="item-2269"><a href="/en/senegal/organizations" >Your Organization</a></li></ul></li><li class="item-1920 menu-deeper menu-parent"><a href="/en/why-senegel" >Why SENEGEL<span class="menu-toggler"></span></a><ul class="menu-child"><li class="item-1921"><a href="/en/why-senegel/what-is-senegel" >What is SENEGEL</a></li><li class="item-1922"><a href="/en/why-senegel/how-it-works" >How it Works</a></li></ul></li></ul>
+</div></div><div class="sp-module "><div class="sp-module-content">
+
+<div class="custom"  >
+	<div class="uk-card uk-card-default">
+<div class="uk-card-header"><img src="/images/coat-of-arms.jpg" alt="SENEGAL" class="uk-align-center" /></div>
+<div class=" uk-card-body uk-padding-remove">
+<ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
+<li><a href="/./en/become-a-volunteer"><i class="uk-margin-small-right" uk-icon="icon: push"></i> Become a Volunteer</a></li>
+<li class="uk-nav-divider"></li>
+<li><a href="/./en/report-a-bribe"><i class="uk-margin-small-right" uk-icon="icon: warning"></i> Report a Bribe</a></li>
+<li class="uk-nav-divider"></li>
+<li><a href="/./en/favourites" ><i class="uk-margin-small-right" uk-icon="icon: heart"></i> Favourites</a></li>
+<li class="uk-nav-divider"></li>
+<li><a href="/./en/suggest" ><i class="uk-margin-small-right" uk-icon="icon: file-edit"></i> Suggest an edit</a></li>
+<li class="uk-nav-divider"></li>
+<li> <a onclick='goBack()'><i class="uk-margin-small-right" uk-icon="icon: arrow-left"></i>Go Back</a></li>
+</ul>
+</div>
+</div>
+<script>
+function goBack() {
+    window.history.back()
+}
+</script>
+</div>
+</div></div>
+		
+		
+		
+		
+				
+		<!-- custom module position -->
+		
+	</div>
+</div>				
+
+		
+		
+
+		<!-- Go to top -->
+					<a href="#" class="sp-scroll-up" aria-label="Scroll Up"><span class="fas fa-angle-up" aria-hidden="true"></span></a>
+						<script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1ZIAgNZDHGemm3Z_OcOIBillJRdg0lk0&callback=initMap&v=weekly"
+      defer
+    ></script>
+	</body>
 </html>
