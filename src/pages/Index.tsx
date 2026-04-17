@@ -27,12 +27,12 @@ import clientCheds from "@/assets/clients/cheds.png";
 import clientArmee from "@/assets/clients/armee.png";
 import clientJet from "@/assets/clients/jet.png";
 import clientMarieStopes from "@/assets/clients/marie-stopes.svg";
-import clientBicis from "@/assets/clients/bicis.png";
-import clientWesternUnion from "@/assets/clients/western-union.png";
+import clientBicis from "@/assets/clients/bicis.svg";
+import clientWesternUnion from "@/assets/clients/western-union.svg";
 import clientShell from "@/assets/clients/shell.svg";
 import clientDgid from "@/assets/clients/dgid.svg";
 import clientMarine from "@/assets/clients/marine.svg";
-import clientArsm from "@/assets/clients/arsm.png";
+import clientArsm from "@/assets/clients/arsm.svg";
 
 const services = [
   { icon: Gift, title: "Goodies & Objets Publicitaires", desc: "Stylos, mugs, casquettes, clés USB, tote bags personnalisés.", image: serviceGoodies },
