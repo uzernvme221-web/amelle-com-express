@@ -19,6 +19,7 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [devisOpen, setDevisOpen] = useState(false);
   const location = useLocation();
+  const isHome = location.pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -28,12 +29,14 @@ const Navbar = () => {
 
   useEffect(() => setMobileOpen(false), [location]);
 
+  const solid = !isHome || scrolled;
+
   return (
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? "bg-background/80 backdrop-blur-lg shadow-md"
+          solid
+            ? "bg-background/90 backdrop-blur-lg shadow-md border-b border-border"
             : "bg-transparent"
         }`}
       >
