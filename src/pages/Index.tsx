@@ -26,7 +26,10 @@ import clientOrange from "@/assets/clients/orange.svg";
 import clientCheds from "@/assets/clients/cheds.png";
 import clientArmee from "@/assets/clients/armee.png";
 import clientJet from "@/assets/clients/jet.png";
-import clientMarine from "@/assets/clients/marine.svg";
+import clientMarine from "@/assets/clients/marine.jpeg";
+import clientInnerWheel from "@/assets/clients/inner-wheel.png";
+import clientShell from "@/assets/clients/shell.png";
+import clientWesternUnion from "@/assets/clients/western-union.png";
 import clientCosec from "@/assets/clients/cosec.png";
 import clientDgid from "@/assets/clients/dgid.jpg";
 import clientMinistereFamille from "@/assets/clients/ministere-famille.png";
@@ -298,6 +301,9 @@ const Index = () => {
                 { src: clientArsm, alt: "ARSM - Agence pour la Réinsertion Sociale des Militaires" },
                 { src: clientLonase, alt: "LONASE - Loterie Nationale Sénégalaise" },
                 { src: clientSenelec, alt: "Senelec" },
+                { src: clientInnerWheel, alt: "Inner Wheel" },
+                { src: clientShell, alt: "Shell" },
+                { src: clientWesternUnion, alt: "Western Union" },
               ];
               return [...list, ...list].map((c, i) => (
                 <img
