@@ -26,6 +26,13 @@ import clientOrange from "@/assets/clients/orange.svg";
 import clientCheds from "@/assets/clients/cheds.png";
 import clientArmee from "@/assets/clients/armee.png";
 import clientJet from "@/assets/clients/jet.png";
+import clientMarieStopes from "@/assets/clients/marie-stopes.svg";
+import clientBicis from "@/assets/clients/bicis.png";
+import clientWesternUnion from "@/assets/clients/western-union.png";
+import clientShell from "@/assets/clients/shell.svg";
+import clientDgid from "@/assets/clients/dgid.svg";
+import clientMarine from "@/assets/clients/marine.svg";
+import clientArsm from "@/assets/clients/arsm.png";
 
 const services = [
   { icon: Gift, title: "Goodies & Objets Publicitaires", desc: "Stylos, mugs, casquettes, clés USB, tote bags personnalisés.", image: serviceGoodies },
@@ -262,26 +269,40 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Client Logos */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4">
-          <h3 className="text-center text-muted-foreground font-heading font-semibold mb-10">Ils nous font confiance</h3>
-          <div className="flex flex-wrap justify-center gap-x-12 gap-y-8 items-center">
-            {[
-              { src: clientSonatel, alt: "Sonatel" },
-              { src: clientOrange, alt: "Orange" },
-              { src: clientCheds, alt: "CHEDS" },
-              { src: clientArmee, alt: "État-Major Général des Armées Sénégalaises" },
-              { src: clientJet, alt: "Jet Contractors" },
-            ].map((c) => (
-              <img
-                key={c.alt}
-                src={c.src}
-                alt={`Logo ${c.alt}`}
-                loading="lazy"
-                className="h-12 md:h-14 w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"
-              />
-            ))}
+      {/* Client Logos - Carousel */}
+      <section className="py-16 bg-muted overflow-hidden">
+        <div className="container mx-auto px-4 mb-10">
+          <h3 className="text-center text-muted-foreground font-heading font-semibold">Ils nous font confiance</h3>
+        </div>
+        <div className="relative">
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-muted to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-muted to-transparent z-10" />
+          <div className="flex w-max animate-marquee gap-16 items-center">
+            {(() => {
+              const list = [
+                { src: clientSonatel, alt: "Sonatel" },
+                { src: clientOrange, alt: "Orange" },
+                { src: clientCheds, alt: "CHEDS" },
+                { src: clientArmee, alt: "État-Major Général des Armées Sénégalaises" },
+                { src: clientJet, alt: "Jet Contractors" },
+                { src: clientMarieStopes, alt: "Marie Stopes Sénégal" },
+                { src: clientBicis, alt: "BICIS - Groupe BNP Paribas" },
+                { src: clientWesternUnion, alt: "Western Union" },
+                { src: clientShell, alt: "Shell" },
+                { src: clientDgid, alt: "Direction Générale des Impôts et Domaines" },
+                { src: clientMarine, alt: "Marine Nationale Sénégalaise" },
+                { src: clientArsm, alt: "ARSM - Réinsertion Sociale des Militaires" },
+              ];
+              return [...list, ...list].map((c, i) => (
+                <img
+                  key={`${c.alt}-${i}`}
+                  src={c.src}
+                  alt={`Logo ${c.alt}`}
+                  loading="lazy"
+                  className="h-14 md:h-16 w-auto object-contain shrink-0 hover:scale-110 transition-transform"
+                />
+              ));
+            })()}
           </div>
         </div>
       </section>
