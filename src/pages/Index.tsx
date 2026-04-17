@@ -26,13 +26,16 @@ import clientOrange from "@/assets/clients/orange.svg";
 import clientCheds from "@/assets/clients/cheds.png";
 import clientArmee from "@/assets/clients/armee.png";
 import clientJet from "@/assets/clients/jet.png";
-import clientMarieStopes from "@/assets/clients/marie-stopes.svg";
-import clientBicis from "@/assets/clients/bicis.svg";
-import clientWesternUnion from "@/assets/clients/western-union.svg";
-import clientShell from "@/assets/clients/shell.svg";
-import clientDgid from "@/assets/clients/dgid.svg";
 import clientMarine from "@/assets/clients/marine.svg";
-import clientArsm from "@/assets/clients/arsm.svg";
+import clientCosec from "@/assets/clients/cosec.png";
+import clientDgid from "@/assets/clients/dgid.jpg";
+import clientMinistereFamille from "@/assets/clients/ministere-famille.png";
+import clientLaposte from "@/assets/clients/laposte.png";
+import clientLasa from "@/assets/clients/lasa.svg";
+import clientUemoa from "@/assets/clients/uemoa.png";
+import clientArsm from "@/assets/clients/arsm.png";
+import clientLonase from "@/assets/clients/lonase.webp";
+import clientSenelec from "@/assets/clients/senelec.png";
 
 const services = [
   { icon: Gift, title: "Goodies & Objets Publicitaires", desc: "Stylos, mugs, casquettes, clés USB, tote bags personnalisés.", image: serviceGoodies },
@@ -285,13 +288,16 @@ const Index = () => {
                 { src: clientCheds, alt: "CHEDS" },
                 { src: clientArmee, alt: "État-Major Général des Armées Sénégalaises" },
                 { src: clientJet, alt: "Jet Contractors" },
-                { src: clientMarieStopes, alt: "Marie Stopes Sénégal" },
-                { src: clientBicis, alt: "BICIS - Groupe BNP Paribas" },
-                { src: clientWesternUnion, alt: "Western Union" },
-                { src: clientShell, alt: "Shell" },
-                { src: clientDgid, alt: "Direction Générale des Impôts et Domaines" },
                 { src: clientMarine, alt: "Marine Nationale Sénégalaise" },
-                { src: clientArsm, alt: "ARSM - Réinsertion Sociale des Militaires" },
+                { src: clientCosec, alt: "COSEC" },
+                { src: clientDgid, alt: "Direction Générale des Impôts et des Domaines" },
+                { src: clientMinistereFamille, alt: "Ministère de la Famille, de l'Action Sociale et des Solidarités" },
+                { src: clientLaposte, alt: "La Poste Sénégal" },
+                { src: clientLasa, alt: "LASA" },
+                { src: clientUemoa, alt: "UEMOA" },
+                { src: clientArsm, alt: "ARSM - Agence pour la Réinsertion Sociale des Militaires" },
+                { src: clientLonase, alt: "LONASE - Loterie Nationale Sénégalaise" },
+                { src: clientSenelec, alt: "Senelec" },
               ];
               return [...list, ...list].map((c, i) => (
                 <img
