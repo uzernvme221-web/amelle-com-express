@@ -124,19 +124,30 @@ const Index = () => {
   return (
     <div className="overflow-hidden">
       {/* Hero */}
-      <section className="relative min-h-screen flex items-center">
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        <video
+          src="/hero-bg.mp4"
+          poster={heroAgency}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover animate-[heroZoom_20s_ease-in-out_infinite_alternate]"
+        />
         <img
           src={heroAgency}
           alt="Équipe créative africaine au travail dans une agence moderne à Dakar"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover -z-10"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(228,85%,24%/0.85)] via-[hsl(228,85%,24%/0.6)] to-transparent" />
-        <div className="container mx-auto px-4 relative z-10 py-32">
+        <div className="absolute inset-0 bg-primary/60" />
+        <div className="container mx-auto px-4 relative z-10 py-32 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-3xl"
+            className="max-w-3xl mx-auto"
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight mb-6 text-primary-foreground">
               Donnez de la voix <br />à votre <span className="text-secondary">marque.</span>
@@ -144,7 +155,7 @@ const Index = () => {
             <p className="text-lg md:text-xl text-primary-foreground/80 mb-8">
               Impression · Signalétique · Goodies · Web · Événements · Vidéo
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 justify-center">
               <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-heading font-semibold">
                 <Link to="/services">Nos Services</Link>
               </Button>
