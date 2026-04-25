@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import FloatingDevisButton from "./components/FloatingDevisButton";
+import FloatingWhatsAppButton from "./components/FloatingWhatsAppButton";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
 
@@ -36,6 +37,7 @@ const App = () => (
         </main>
         <Footer />
         <FloatingDevisButton />
+        <FloatingWhatsAppButton />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
