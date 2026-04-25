@@ -15,10 +15,9 @@ const FloatingWhatsAppButton = () => {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Discuter sur WhatsApp"
-      className="fixed bottom-6 left-6 z-40 bg-[hsl(142,70%,45%)] hover:bg-[hsl(142,70%,40%)] text-white rounded-full px-5 py-3 shadow-lg flex items-center gap-2 font-heading font-semibold transition-transform hover:scale-105 animate-pulse-soft"
+      className="fixed bottom-24 right-6 z-40 bg-[hsl(142,70%,45%)] hover:bg-[hsl(142,70%,40%)] text-white rounded-full w-14 h-14 shadow-lg flex items-center justify-center transition-transform hover:scale-105 animate-pulse-soft"
     >
-      <MessageCircle size={22} />
-      <span className="hidden sm:inline">WhatsApp</span>
+      <MessageCircle size={26} />
     </a>
   );
 };
