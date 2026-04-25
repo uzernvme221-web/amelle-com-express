@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { whatsappUrl } from "@/components/FloatingWhatsAppButton";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -110,7 +111,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-heading font-semibold mb-1">Téléphone</h3>
-                    <p className="text-muted-foreground text-sm">+221 XX XXX XX XX</p>
+                    <a href="tel:+221778403939" className="text-muted-foreground text-sm hover:text-primary">+221 77 840 39 39</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -119,18 +120,27 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-heading font-semibold mb-1">Email</h3>
-                    <p className="text-muted-foreground text-sm">contact@amellecom.sn</p>
+                    <a href="mailto:contact@amellecom.com" className="text-muted-foreground text-sm hover:text-primary">contact@amellecom.com</a>
                   </div>
                 </div>
-                <a
-                  href="https://wa.me/221XXXXXXXX"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 bg-[hsl(142,70%,45%)] text-[hsl(0,0%,100%)] px-6 py-3 rounded-xl font-heading font-semibold hover:opacity-90 transition-opacity w-fit"
-                >
-                  <MessageCircle size={20} />
-                  Discuter sur WhatsApp
-                </a>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 bg-[hsl(142,70%,45%)] text-white px-6 py-3 rounded-xl font-heading font-semibold hover:opacity-90 transition-opacity w-fit"
+                  >
+                    <MessageCircle size={20} />
+                    Parler sur WhatsApp
+                  </a>
+                  <a
+                    href="mailto:contact@amellecom.com"
+                    className="flex items-center gap-3 bg-secondary text-secondary-foreground px-6 py-3 rounded-xl font-heading font-semibold hover:opacity-90 transition-opacity w-fit"
+                  >
+                    <Mail size={20} />
+                    Nous contacter par email
+                  </a>
+                </div>
               </div>
 
               {/* Map placeholder */}
