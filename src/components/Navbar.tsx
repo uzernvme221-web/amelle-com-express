@@ -8,8 +8,6 @@ import DevisRapideModal from "./DevisRapideModal";
 const navLinks = [
   { label: "Accueil", path: "/" },
   { label: "Services", path: "/services" },
-  
-  { label: "Réalisations", path: "/realisations" },
   { label: "À Propos", path: "/a-propos" },
   { label: "Contact", path: "/contact" },
 ];
