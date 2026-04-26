@@ -360,6 +360,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* FAQ */}
+      <FAQSection />
+
       {/* Contact CTA */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
