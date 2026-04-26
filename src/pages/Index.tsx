@@ -55,7 +55,6 @@ const stats = [
   { icon: Clock, value: 20, suffix: "+", label: "Années d'expérience" },
   { icon: Users, value: 200, suffix: "+", label: "Clients satisfaits" },
   { icon: Briefcase, value: 500, suffix: "+", label: "Projets livrés" },
-  { icon: Award, value: 15, suffix: "", label: "Prix & distinctions" },
 ];
 
 const testimonials = [
