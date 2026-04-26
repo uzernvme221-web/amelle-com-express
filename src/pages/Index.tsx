@@ -11,7 +11,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Skeleton } from "@/components/ui/skeleton";
 import heroAgency from "@/assets/hero-agency.jpg";
 import serviceGoodies from "@/assets/goodies.png";
-import serviceRollups from "@/assets/service-rollups.jpg";
+import serviceRollups from "@/assets/kakemonos.png";
 import serviceSignage from "@/assets/service-signage.jpg";
 import servicePrinting from "@/assets/service-printing.jpg";
 import serviceWeb from "@/assets/service-web.jpg";

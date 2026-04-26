@@ -6,7 +6,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import serviceGoodies from "@/assets/goodies.png";
-import serviceRollups from "@/assets/service-rollups.jpg";
+import serviceRollups from "@/assets/kakemonos.png";
 import serviceSignage from "@/assets/service-signage.jpg";
 import servicePrinting from "@/assets/service-printing.jpg";
 import serviceWeb from "@/assets/service-web.jpg";
