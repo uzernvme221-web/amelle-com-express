@@ -55,7 +55,6 @@ const stats = [
   { icon: Clock, value: 20, suffix: "+", label: "Années d'expérience" },
   { icon: Users, value: 200, suffix: "+", label: "Clients satisfaits" },
   { icon: Briefcase, value: 500, suffix: "+", label: "Projets livrés" },
-  { icon: Award, value: 15, suffix: "", label: "Prix & distinctions" },
 ];
 
 const testimonials = [
@@ -224,7 +223,7 @@ const Index = () => {
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-16">
             Pourquoi <span className="text-secondary">Amelle Com</span> ?
           </h2>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             {stats.map((stat, i) => (
               <motion.div
                 key={i}
