@@ -125,7 +125,7 @@ const FAQSection = () => {
             <h3 className="font-heading text-xl md:text-2xl font-bold text-white">
               Prêt à lancer votre projet ?
             </h3>
-            <p className="text-sm mt-1" style={{ color: `${BLUE}cc` }}>
+            <p className="text-sm mt-1" style={{ color: `${ORANGE}cc` }}>
               Devis gratuit sous 24h · Livraison Dakar & Sénégal
             </p>
           </div>
