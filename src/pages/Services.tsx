@@ -5,7 +5,7 @@ import {
   Gift, RectangleVertical, Store, Printer, Globe, Video, Megaphone, CalendarDays
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import serviceGoodies from "@/assets/service-goodies.jpg";
+import serviceGoodies from "@/assets/goodies.png";
 import serviceRollups from "@/assets/service-rollups.jpg";
 import serviceSignage from "@/assets/service-signage.jpg";
 import servicePrinting from "@/assets/service-printing.jpg";
