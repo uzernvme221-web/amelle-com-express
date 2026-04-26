@@ -134,7 +134,7 @@ const FAQSection = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-heading font-semibold transition-transform hover:scale-105 whitespace-nowrap"
-            style={{ backgroundColor: BLUE, color: DARK }}
+            style={{ backgroundColor: ORANGE, color: "#ffffff" }}
           >
             Demander un devis →
           </a>
