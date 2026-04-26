@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 
 const BLUE = "#0A1F6E";
+const ORANGE = "#F76C1B";
 const DARK = "#0a1f44";
 const WHATSAPP_URL = "https://wa.me/221778403939";
 
