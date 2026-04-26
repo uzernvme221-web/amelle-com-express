@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Skeleton } from "@/components/ui/skeleton";
+import FAQSection from "@/components/FAQSection";
 import heroAgency from "@/assets/hero-agency.jpg";
 import serviceGoodies from "@/assets/goodies.png";
 import serviceRollups from "@/assets/kakemonos.png";
