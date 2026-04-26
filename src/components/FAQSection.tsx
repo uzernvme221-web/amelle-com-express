@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 
-const GOLD = "#C9A84C";
-const DARK = "#3a2a00";
+const BLUE = "#0A1F6E";
+const DARK = "#0a1f44";
 const WHATSAPP_URL = "https://wa.me/221778403939";
 
 const faqs = [
@@ -50,9 +50,9 @@ const FAQSection = () => {
           <span
             className="inline-block px-4 py-1 rounded-full text-xs font-semibold tracking-wide uppercase mb-4 border"
             style={{
-              color: GOLD,
-              borderColor: GOLD,
-              backgroundColor: "rgba(201, 168, 76, 0.1)",
+              color: BLUE,
+              borderColor: BLUE,
+              backgroundColor: "rgba(10, 31, 110, 0.1)",
             }}
           >
             Questions fréquentes
@@ -65,7 +65,7 @@ const FAQSection = () => {
           </p>
           <div
             className="mx-auto mt-6 h-[3px] w-16 rounded-full"
-            style={{ backgroundColor: GOLD }}
+            style={{ backgroundColor: BLUE }}
           />
         </div>
 
@@ -76,7 +76,7 @@ const FAQSection = () => {
               <div
                 key={i}
                 className="bg-card border border-border rounded-xl overflow-hidden transition-shadow"
-                style={isOpen ? { boxShadow: `0 4px 20px -8px ${GOLD}55` } : {}}
+                style={isOpen ? { boxShadow: `0 4px 20px -8px ${BLUE}55` } : {}}
               >
                 <button
                   type="button"
@@ -90,8 +90,8 @@ const FAQSection = () => {
                   <span
                     className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-transform"
                     style={{
-                      backgroundColor: "rgba(201, 168, 76, 0.12)",
-                      color: GOLD,
+                      backgroundColor: "rgba(10, 31, 110, 0.12)",
+                      color: BLUE,
                     }}
                   >
                     {isOpen ? <Minus size={16} /> : <Plus size={16} />}
@@ -105,7 +105,7 @@ const FAQSection = () => {
                   <div className="overflow-hidden">
                     <div
                       className="px-5 pb-5 pt-1 text-muted-foreground leading-relaxed border-t"
-                      style={{ borderColor: `${GOLD}33` }}
+                      style={{ borderColor: `${BLUE}33` }}
                     >
                       <p className="pt-4">{item.a}</p>
                     </div>
@@ -124,7 +124,7 @@ const FAQSection = () => {
             <h3 className="font-heading text-xl md:text-2xl font-bold text-white">
               Prêt à lancer votre projet ?
             </h3>
-            <p className="text-sm mt-1" style={{ color: `${GOLD}cc` }}>
+            <p className="text-sm mt-1" style={{ color: `${BLUE}cc` }}>
               Devis gratuit sous 24h · Livraison Dakar & Sénégal
             </p>
           </div>
@@ -133,7 +133,7 @@ const FAQSection = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-heading font-semibold transition-transform hover:scale-105 whitespace-nowrap"
-            style={{ backgroundColor: GOLD, color: DARK }}
+            style={{ backgroundColor: BLUE, color: DARK }}
           >
             Demander un devis →
           </a>
