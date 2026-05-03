@@ -243,34 +243,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Featured Projects */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-16">
-            Projets en Vedette
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {featuredProjects.map((project, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="group relative rounded-xl overflow-hidden aspect-[4/3] cursor-pointer"
-              >
-                <LazyImage src={project.image} alt={project.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-foreground/30 group-hover:bg-foreground/50 transition-colors" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-primary-foreground">
-                  <span className="text-xs font-medium bg-secondary/80 px-2 py-1 rounded">{project.tag}</span>
-                  <h3 className="font-heading font-bold text-xl mt-2">{project.title}</h3>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Devis CTA */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4 text-center">
