@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import serviceGoodies from "@/assets/goodies.png";
 import serviceRollups from "@/assets/kakemonos.png";
 import serviceSignage from "@/assets/service-signage.jpg";
-import servicePrinting from "@/assets/service-printing.jpg";
+import servicePrinting from "@/assets/impressions.png";
 import serviceWeb from "@/assets/service-web.jpg";
 import serviceVideo from "@/assets/service-video.jpg";
 import serviceAds from "@/assets/service-ads.jpg";
