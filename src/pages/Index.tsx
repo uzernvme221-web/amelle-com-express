@@ -124,7 +124,7 @@ const Index = () => {
   return (
     <div className="overflow-hidden">
       {/* Hero */}
-      <CinematicHero />
+      <AmelleHero />
 
       {/* Marquee */}
       <div className="bg-secondary py-3 overflow-hidden">
