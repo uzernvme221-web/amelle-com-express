@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Skeleton } from "@/components/ui/skeleton";
 import FAQSection from "@/components/FAQSection";
-import heroAgency from "@/assets/hero-agency.jpg";
+import CinematicHero from "@/components/CinematicHero";
 import serviceGoodies from "@/assets/goodies.png";
 import serviceRollups from "@/assets/kakemonos.png";
 import serviceSignage from "@/assets/service-signage.jpg";
