@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Skeleton } from "@/components/ui/skeleton";
 import FAQSection from "@/components/FAQSection";
-import CinematicHero from "@/components/CinematicHero";
+import AmelleHero from "@/components/AmelleHero";
 import serviceGoodies from "@/assets/goodies.png";
 import serviceRollups from "@/assets/kakemonos.png";
 import serviceSignage from "@/assets/service-signage.jpg";
@@ -124,7 +124,7 @@ const Index = () => {
   return (
     <div className="overflow-hidden">
       {/* Hero */}
-      <CinematicHero />
+      <AmelleHero />
 
       {/* Marquee */}
       <div className="bg-secondary py-3 overflow-hidden">
