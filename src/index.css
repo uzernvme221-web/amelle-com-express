@@ -71,3 +71,20 @@
 .animate-marquee {
   animation: marquee 20s linear infinite;
 }
+
+@keyframes fogDrift {
+  0%   { transform: translate3d(-5%, 0, 0) scale(1.1); }
+  50%  { transform: translate3d(5%, -2%, 0) scale(1.15); }
+  100% { transform: translate3d(-5%, 0, 0) scale(1.1); }
+}
+
+.animate-fog {
+  animation: fogDrift 30s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fog,
+  .animate-marquee {
+    animation: none !important;
+  }
+}
